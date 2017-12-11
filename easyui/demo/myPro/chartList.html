@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Client Side Pagination in DataGrid - jQuery EasyUI Demo</title>
+		<link rel="stylesheet" type="text/css" href="../../themes/default/easyui.css">
+		<link rel="stylesheet" type="text/css" href="../../themes/icon.css">
+		<link rel="stylesheet" type="text/css" href="../demo.css">
+		<script type="text/javascript" src="../../jquery.min.js"></script>
+		<script type="text/javascript" src="../../jquery.easyui.min.js"></script>
+	</head>
+
+	<body>
+
+		<table id="dg">
+		</table>
+		<script>
+			$('#dg').datagrid({
+				url: 'http://localhost:8080/springTest/first/jsonTest.do',
+				columns: [
+					[{
+						field: 'num',
+						title: 'num',
+						width: 100
+					}, {
+						field: 'grade',
+						title: 'grade',
+						width: 100
+					}]
+				]
+			});
+		</script>
+	</body>
+</html>

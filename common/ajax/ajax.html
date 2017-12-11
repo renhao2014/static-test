@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../../js/jquery/jquery-1.8.0.min.js"></script>
+	</head>
+
+	<body>
+		<script>
+			
+//			var orderItemsArray=new Array(10);
+//			
+//			var orderItem1=new Object();
+//			orderItem1.orderitemId=4;
+//			
+//			var orderItem2=new Object();
+//			orderItem2.orderitemId=5;
+//			
+//			orderItemsArray[0]=orderItem1;
+//			orderItemsArray[1]=orderItem1;
+//			
+//			var orderItemsVO= new Object();
+//			orderItemsVO.orderItems=orderItemsArray;
+			
+			
+			var order= new Object();
+			order.orderId=101;
+			
+			var orderVO=new Object();
+			orderVO.order=order;
+			
+			var obj={
+			  "qrcode": "1",
+			  "start_coord": {
+			    "lng": 102.795198,
+			    "lat": 25.042897
+			  },
+			  "start_date": "2017-06-26 09:34:00",
+			  "start_place": "昆明长水机场"
+			}
+			
+			
+			$.ajax({
+				type: "POST",
+				url: "http://localhost:8031/thirdPartyApi/onCar",
+				data:{'postjson':JSON.stringify(obj)},
+				dataType: "json",
+				success: function(data) {
+					console.log("getdata from server:" + JSON.stringify(data));
+				},
+				error:function(data1){
+					console.log(JSON.stringify(data1));
+				}
+			});
+		</script>
+	</body>
+
+</html>

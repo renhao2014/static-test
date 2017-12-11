@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+
+		<form id="form3">
+			<input type="text" name="text1" value=""/></br>
+			
+			开始：<input type="radio" name="ifStart" value="0" /></br>
+			结束：<input type="radio" name="ifStart" value="1"/></br>
+			
+			
+			红色：<input type="checkbox" name="color" value="0"/></br>
+			蓝色：<input type="checkbox" name="color" value="1" /></br>
+			
+			</br>
+			<select name="best">
+				<option value="0">苹果</option>
+				<option value="1" >香蕉</option>
+			</select>
+		</form>
+		
+		
+		<script src="../../../js/jquery/jquery-1.8.3.min.js"></script>
+		<script src="../../../easyui/jquery.easyui.min.js"></script>
+		<script src="formUtil.js"></script>
+			
+		<script type="text/javascript">
+			var data={text1:"abc",ifStart:"0",color:"0,1",best:"1"};
+			FormUtil.setDataToForm("#form3",data,"");
+			//$("#form3").form('load',data);
+			//$("[name='name']").val("aaa");
+			
+			//console.log($("[name='ifStart']")[0].type);
+			
+			//var s=$("#form3 [name='ifStart']"+"[value='1']").val();
+			
+			//var s=$("#form3 [name='best']"+" [value='1']").html();
+			//console.log("#form3 [name='best']"+" [value='1']");
+			//$("#form3 [name='best']").find("option[value='1']").attr("selected",true);
+			//console.log(s);
+			
+		</script>
+		
+	</body>
+</html>

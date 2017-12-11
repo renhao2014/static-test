@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../easyui/jquery.min.js"></script>
+	</head>
+	<body>
+		<script>
+			
+//			var orderItemsArray=new Array(10);
+//			var orderItem1=new Object();
+//			orderItem1.orderitemId=4;
+//			
+//			var orderItem2=new Object();
+//			orderItem2.orderitemId=5;
+//			
+//			orderItemsArray[0]=orderItem1;
+//			orderItemsArray[1]=orderItem1;
+//			
+//			var orderItemsVO= new Object();
+//			orderItemsVO.orderItems=orderItemsArray;
+			
+			var child=new Object();
+			child.phone=1111111111;
+			
+			var user= new Object();
+			user.mobile=18995917385;
+			
+			var paramVO= new Object();
+			paramVO.user=user;
+			paramVO.child=child;
+			
+			
+			console.log(JSON.stringify(paramVO));
+			var paramVOjson=JSON.stringify(paramVO);
+			
+
+			//@requestBody
+//			$.ajax({
+//				type: "POST",
+//				url: "http://localhost:8082/paramTest/embeddedObject",
+//				data:JSON.stringify(paramVO),
+//				dataType: "jsonp",
+//				contentType:"application/json",
+//				success: function(data) {
+//					console.log("getdata from server:" + JSON.stringify(data));
+//				}
+//			});
+			
+			
+			//noObjects
+			$.ajax({
+				type: "POST",
+				url: "http://localhost:8082/paramTest/noObjects",
+//				data:JSON.stringify(paramVO),
+				dataType: "jsonp",
+				contentType:"application/json",
+				success: function(data) {
+					console.log("getdata from server:" + JSON.stringify(data));
+				}
+			});			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		</script>
+		
+		
+		
+		
+		
+		
+	</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<h1>1234</h1>
+		<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+		<div id="main" style="width: 600px;height:400px;"></div>
+		
+		<script src="../../js/jquery/jquery-1.8.0.min.js"></script>
+		<script src="../echarts.js"></script>
+		<script src="../common/enchartsDataAdaptor.js"></script>
+		<script type="text/javascript">
+			// 基于准备好的dom，初始化echarts实例
+			var myChart = echarts.init(document.getElementById('main'));
+
+			//准备数据
+			var map=new Object();
+			map.直接访问=18;
+			map.间接访问=34;
+			var result=mapTo2List(map);
+			console.log(JSON.stringify(result));
+
+
+
+			// 指定图表的配置项和数据
+			var option = {
+				title: {
+					text: 'ECharts 入门示例'
+				},
+				tooltip: {},
+				legend: {
+					data: ['销量']
+				},
+				xAxis: {
+					data: result.keys
+				},
+				yAxis: {},
+				series: [{
+					name: '销量',
+					type: 'bar',
+					data: result.values
+				}]
+			};
+
+			// 使用刚指定的配置项和数据显示图表。
+			myChart.setOption(option);
+		</script>
+
+	</body>
+
+</html>

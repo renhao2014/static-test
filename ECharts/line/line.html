@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<h1>折线/柱状图两用</h1>
+
+
+	<body>
+		<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+		<div id="main" style="width: 600px;height:400px;"></div>
+
+		<script src="../../js/jquery/jquery-1.8.0.min.js"></script>
+		<script src="../echarts.js"></script>
+		<script src="../common/enchartsDataAdaptor.js"></script>
+		<script type="text/javascript">
+			// 基于准备好的dom，初始化echarts实例
+			var myChart = echarts.init(document.getElementById('main'));
+			
+			//准备数据
+			var map=new Object();
+			map['1992']=18;
+			map['1995']=34;
+			map['2002']=18;
+			map['2007']=34;
+			var result=mapTo2List(map);
+			console.log(JSON.stringify(result));
+			
+			
+			option = {
+				title: {
+					text: '未来一周气温变化',
+					subtext: '纯属虚构'
+				},
+				tooltip: {
+					trigger: 'axis'
+				},
+				legend: {
+					data: ['最高气温']
+				},
+				toolbox: {
+					show: true,
+					feature: {
+						dataZoom: {
+							yAxisIndex: 'none'
+						},
+						dataView: {
+							readOnly: false
+						},
+						magicType: {
+							type: ['line', 'bar']
+						},
+						restore: {},
+						saveAsImage: {}
+					}
+				},
+				xAxis: {
+					type: 'category',
+					boundaryGap: false,//如果改为折线图需要调整此处为false
+					data:result.keys
+				},
+				yAxis: {
+					type: 'value',
+					axisLabel: {
+						formatter: '{value} °C'
+					}
+				},
+				series: [{
+					name: '最高气温',
+					type: 'line',//如果改为折线图需要调整此处为line
+					data: result.values,
+					markLine: {
+						data: [{
+							type: 'average',
+							name: '平均值'
+						}]
+					}
+				}]
+			};
+
+			myChart.setOption(option);
+		</script>
+
+	</body>
+
+</html>
+
+<!--boundary在非类目轴只有true和false两种,faLse就是贴边没有边距,true就是如图的间距..-->

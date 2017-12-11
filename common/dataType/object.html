@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script src="../../js/jquery/jquery-1.8.3.min.js"></script>
+		<script>
+
+		var testObject=new Object();
+		testObject.attr1='val1';
+		testObject.attr2='val2';
+		
+		
+
+		//遍历数组(没有附加参数)
+		$.each(testObject, function(key) {
+		     console.log(key+":"+testObject[key]);
+		});
+
+
+		</script>
+	</body>
+</html>

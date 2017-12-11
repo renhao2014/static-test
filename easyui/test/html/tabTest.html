@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery UI 标签页（Tabs） - 默认功能</title>
+
+		<link rel="stylesheet" type="text/css" href="../../themes/default/easyui.css">
+		<link rel="stylesheet" type="text/css" href="../../themes/icon.css">
+		<link rel="stylesheet" type="text/css" href="../demo.css">
+	</head>
+
+	<body>
+
+		<div id="tt" class="easyui-tabs" style="width:500px;height:250px;">
+			<div title="Tab1" style="padding:20px;display:none;">
+				tab1
+			</div>
+			<div title="Tab2" data-options="closable:true" style="overflow:auto;padding:20px;display:none;">
+				tab2
+			</div>
+			<div title="Tab3" data-options="iconCls:'icon-reload',closable:true" style="display:none;">
+				tab3
+			</div>
+		</div>
+
+		<script src="jquery.min.js"></script>
+		<script src="jquery.easyui.min.js"></script>
+
+		<script>
+			$(function() {
+				$("#tt").tabs();
+			    $('#tt').tabs('add',{
+				    title:'New Tab',
+//				    content:'Tab Body',
+					href:'http://127.0.0.1:8020/testPro/easyui/demo/tabs/tabstools.html',
+				    closable:true,
+				    tools:[{
+				        iconCls:'icon-mini-refresh',
+				        handler:function(){
+				            alert('refresh');
+				        }
+				    }]
+				});
+			});
+		</script>
+
+	</body>
+
+</html>

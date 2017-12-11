@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<head>
+       <meta charset="utf-8">
+   </head>
+   <body >
+       <div id="container" style="height: 500px"></div>
+        
+       <!-- V型知识库 www.vxzsk.com -->
+       <!--<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>-->
+       <script type="text/javascript" src="../echarts.js" ></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+       <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+       <script src="mapStyle.js"></script>
+       <script type="text/javascript">
+		var dom = document.getElementById("container");
+		var myChart = echarts.init(dom);
+		var data = [
+		     {name: '盘龙区', value: 20},
+		     {name: '盘龙区', value: 30},
+		     {name: '官渡区', value: 40},
+		     {name: '玉溪', value: 50},
+		     {name: '西山区', value: 60},
+		     {name: '东川区', value: 70},
+		     {name: '呈贡县', value: 80},
+		     {name: '晋宁县', value: 90},
+		     {name: '富民县', value: 100},
+		     {name: '宜良县', value: 110},
+		     {name: '石林彝族自治县', value: 120},
+		     {name: '嵩明县', value: 130},
+		     {name: '禄劝彝族苗族自治县', value: 140},
+		     {name: '寻甸回族彝族自治县', value: 150}
+		];
+		var geoCoordMap = {
+		    '盘龙区':[102.755889,25.22374],
+		    '盘龙区':[102.755889,25.12374],
+		    '官渡区':[102.750714,25.021628],
+		    '玉溪':[102.534773,24.359751],
+		    '西山区':[102.670226,25.043628],
+		    '东川区':[103.18,26.08],
+		    '呈贡县':[102.80,24.88],
+		    '晋宁县':[102.60,24.67],
+		    '富民县':[102.50,25.22],
+		    '宜良县':[103.15,24.92],
+		    '石林彝族自治县':[103.27,24.77],
+		    '嵩明县':[103.03,25.35],
+		    '禄劝彝族苗族自治县':[102.47,25.55],
+		    '寻甸回族彝族自治县':[103.25,25.57]
+		};
+		
+		var convertData = function (data) {
+		    var res = [];
+		    for (var i = 0; i < data.length; i++) {
+		        var geoCoord = geoCoordMap[data[i].name];
+		        if (geoCoord) {
+		            res.push({
+		                name: data[i].name,
+		                value: geoCoord.concat(data[i].value)
+		            });
+		        }
+		    }
+		    return res;
+		};
+		
+		option = {
+		    title: {
+		        text: '销量分布情况',
+		        subtext: '',
+		        sublink: '',
+		        left: 'center'
+		    },
+		    tooltip : {
+		        trigger: 'item'
+		    },
+		    bmap: {
+		        center: [102.713674,25.051578],
+		        zoom: 9,
+		        roam: true,
+		        mapStyle: mapStyle
+		    },
+		    series : [
+		        {
+		            name: '订单数',
+		            type: 'scatter',
+		            coordinateSystem: 'bmap',
+		            data: convertData(data),
+		            symbolSize: function (val) {
+		                return val[2] / 10;
+		            },
+		            label: {
+		                normal: {
+		                    formatter: function (obj){
+		                    	console.log(JSON.stringify(obj));
+								return obj.name;
+							},
+		                    position: 'right',
+		                    show: false
+		                },
+		                emphasis: {
+		                    show: false
+		                }
+		            },
+		            itemStyle: {
+		                normal: {
+		                    color: 'purple'
+		                }
+		            }
+		        },
+		        {
+		            name: 'TOP2',
+		            type: 'effectScatter',
+		            coordinateSystem: 'bmap',
+		            data: convertData(data.sort(function (a, b) {
+		                return b.value - a.value;
+		            }).slice(0, 2)),
+		            symbolSize: function (val) {
+		                return val[2] / 10;
+		            },
+		            showEffectOn: 'render',
+		            rippleEffect: {
+		                brushType: 'stroke'
+		            },
+		            hoverAnimation: true,
+		            label: {
+		                normal: {
+		                    formatter: '{b}',
+		                    position: 'right',
+		                    show: false
+		                }
+		            },
+		            itemStyle: {
+		                normal: {
+		                    color: 'purple',
+		                    shadowBlur: 10,
+		                    shadowColor: '#333'
+		                }
+		            },
+		            zlevel: 1
+		        }
+		    ]
+		};
+		if (option && typeof option === "object") {
+		    myChart.setOption(option, true);
+		}
+       </script>
+   </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Editable TreeGrid - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../../themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../../../themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="../../demo.css">
+	<script type="text/javascript" src="../../../jquery.min.js"></script>
+	<script type="text/javascript" src="../../../jquery.easyui.min.js"></script>
+</head>
+<body>
+	<h2>Editable TreeGrid</h2>
+	<p>Select one node and click edit button to perform editing.</p>
+
+	<table id="tg" class="easyui-treegrid" title="Editable TreeGrid" style="width:180px;height:auto"
+			data-options="
+				iconCls: 'icon-folder',
+				//rownumbers: true,
+				//animate: true,
+				//collapsible: true,
+				fitColumns: true,
+				url: '../treegrid_data2.json',
+				method: 'get',
+				idField: 'id',
+				treeField: 'name',
+				checkbox:true
+			">
+		<thead>
+			<tr>
+				<th data-options="field:'name',width:80">Name</th>
+			</tr>
+		</thead>
+	</table>
+	<script type="text/javascript">
+	
+	</script>
+
+</body>
+</html>

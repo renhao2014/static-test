@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- nePlayer CSS -->
+    <link href="//nos.netease.com/vod163/nep.min.css" rel="stylesheet">
+</head>
+<body>
+<!-- html5 video tag -->
+<div style="height: 400px;width: 600px;">
+<video id="my-video" class="video-js vjs-big-play-centered vjs-fluid" x-webkit-airplay="allow" 
+	webkit-playsinline controls poster="//nos.netease.com/vod163/poster.png" 
+	preload="auto" width="640" height="360" data-setup="{}">
+</video>
+</div>
+<!-- nePlayer Js -->
+<script src="//nos.netease.com/vod163/nep.min.js"></script>
+
+<script>
+	myPlayer = neplayer('my-video');
+	myPlayer.setDataSource({src:"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4",type:"video/mp4"});
+	myPlayer.play();
+	//注册播放器事件
+	//play
+	myPlayer.onPlayState(1,function(){
+		console.log('play')
+	});
+	//pause
+	myPlayer.onPlayState(2,function(){
+		console.log('pause')
+	});
+	//ended
+	myPlayer.onPlayState(3,function(){
+		console.log('ended')
+	});
+	//error
+	myPlayer.onError(function(data){
+		console.log(data)
+	});
+	
+	console.log("getDuration:"+myPlayer.getDuration());
+	setInterval(function(){
+		console.log("getDuration:"+myPlayer.getDuration());
+		console.log("getCurrentPosition:"+myPlayer.getCurrentPosition());
+	},2000);
+	
+</script>
+
+
+</body>
+</html>
+

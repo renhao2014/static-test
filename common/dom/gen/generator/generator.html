@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>代码生成器V1.0</title>
+	</head>
+	<body>
+		<h3>数据库连接信息</h3>
+		（在配置文件中配置，省得每次都输入）
+		<div id="dbLinkInfo">
+		<!--dbIp:&emsp;<input type="text" id="dbIp"/><br/>
+		dbPort:<input type="text" id="dbPort"/><br/>
+		dbName:<input type="text" id="dbName"/><br/>
+		userName:<input type="text" id="userName"/><br/>
+		password:<input type="text" id="password"/><br/>-->
+		<input type="button" value="重新获取数据库信息" id="linkButton"/>
+		</div>
+		
+		<!--动态绘制表信息 -->
+		<h3>表信息</h3>
+		<div id="tablesInfo">
+		</div>
+	
+	
+		<h3>路径配置</h3>
+		<div>
+		（默认从配置文件中读取，省的每次都要录入）
+		<!--entity文件路径:<input type="text" id="entityFilePath"/><br/>
+		entity包路径:<input type="text" id="entityPackagePath"/><br/>
+		
+		dao文件路径:<input type="text" id="daoFilePath"/><br/>
+		dao包路径:<input type="text" id="daoPackagePath"/><br/>
+		
+		service文件路径:<input type="text" id="serviceFilePath"/><br/>
+		service包路径:<input type="text" id="servicePackagePath"/><br/>
+		
+		controller文件路径:<input type="text" id="controllerFilePath"/><br/>
+		controller包路径:<input type="text" id="controllerFilePath"/><br/>
+		
+		html文件路径:<input type="text" id="htmlFilePath"/><br/>
+		jsp文件路径:<input type="text" id="jspFilePath"/><br/>-->
+		</div>
+		
+		<div>
+			<p></p>
+			<input type="button" value="开始生成文件" id="generateButton"/>
+		</div>
+		
+	<script src="../../js/jquery/jquery-1.8.0.min.js"></script>
+	<script src="generator.js"></script>
+	</body>
+</html>

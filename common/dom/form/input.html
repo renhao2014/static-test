@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--
+	作者：1045617063@qq.com
+	时间：2017-04-20
+	描述：各类输入控件的读写
+-->
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src=""></script>
+	</head>
+	<body>
+		
+		    <form name="testForm" action="http://localhost:8080/jeecg-3.6.6.3/rest/api/test/test" method="post" enctype="multipart/form-data" target="_blank">
+            text:<input id="text1"  name="text1" type="text" disabled form="testForm"><br/>
+            text1:<input id="text2"  name="text2" type="text" list="datalist-id" maxlength="3" pattern="[0-9]" placeholder="我是提示" value="我是value" required autofocus><br/>
+            text2:<input id="text3"  name="text3" type="text" readonly><br/>
+            date:<input id="time1" name="time1" type="date">
+            time:<input id="time2" name="time2" type="time"><br/>
+            datetime-local:<input id="datetime-local" name="datetime-local" type="datetime-local"><br/>
+            password:<input id="password1" name="password1" type="password"><br/>
+            file:<input id="file1" type="file"  name="file" multiple><br/>
+            hidden:<input id="hidden1" name="hidden" type="hidden"><br/>
+            reset:<input id="reset1" name="reset" type="reset"><br/>
+            button:<input id="button1" name="button" type="button"><br/>
+            image:<input id="image1" name="image" type="image" alt="image" src="../ace/assets/avatars/avatar.png"><br/>
+            number:<input id="number1" name="number" type="number" min="10" max="123" ><br/>
+            number2:<input id="number2" name="number" type="number" step="5"><br/>
+            range:<input id="range1" name="range" type="range" min="0" max="100" value="30" step="5" oninput="output1.value=value">
+            <output id="output1" name="output" >30</output><br/>
+            search:<input id="search1" name="search" type="search"><br/>
+
+            tel:<input id="tel1" name="tel" type="tel" value="18995917385"><br/>
+            url:<input id="url1" name="url" type="url"><br/>
+            email:<input id="email1" name="email" type="email"><br/>
+            color:<input id="color1" name="color" type="color"><br/>
+
+
+            <p></p>
+            checkbox:<input id="checkbox1" name="checkbox" type="checkbox" value="0" checked><br/>
+            checkbox:<input id="checkbox2" name="checkbox" type="checkbox" value="1" checked><br/>
+
+            radio:<input id="radio1" name="radio"  value="0" type="radio" ><br/>
+            radio:<input id="radio2" name="radio"  value="1" type="radio" checked><br/>
+
+            <select id="select1" name="select">
+                <option value=11111>Volvo</option>
+                <option value=22222 selected="selected" >Fiat</option>
+            </select>
+            <br />
+
+            <input type="submit" value="提交" /><hr/>
+            <a href="javascript:void(0)"  onclick="smsSend()">短信发送</a>
+        </form>
+        
+        
+        <script src="../../../js/jquery/jquery-1.8.0.min.js"></script>
+        <script>
+        	var options=$("#select1 option:selected");
+        	console.log(options[0].value);
+        	
+        	
+		</script>
+	</body>
+</html>

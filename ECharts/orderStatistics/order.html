@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		
+		<script src="../echarts.js"></script>
+		<script src="../../easyui/jquery.min.js"></script>
+		<script>
+			//异步获取数据 回调中绘制内容
+			$.ajax({
+				type:"post",
+				url:"http://localhost/statistics/order",
+				dataType: "json",
+				success:function(data){
+					console.log(JSON.stringify(data));
+				}
+			});
+			
+			
+			
+		</script>
+		
+		
+		
+		
+	</body>
+</html>

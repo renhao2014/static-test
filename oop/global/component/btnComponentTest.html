@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="btn1" name='buttonDivName1' class="btn-renhao"></div>
+		
+		<script src="../../../js/jquery/jquery-1.8.0.min.js"></script>
+		<script src="button.js"></script>
+		<script>
+			var btn=new Btn();
+			var container='#btn1';
+			var config={
+				buttonName:'btnName1',
+//				buttonId:'btnId1',
+				clickHandler:function(object,data){
+					var args=arguments;
+					console.log('click');
+				}
+			}
+			
+			btn.init(container,config);
+			btn.changeColor('')
+			
+		</script>
+	</body>
+</html>

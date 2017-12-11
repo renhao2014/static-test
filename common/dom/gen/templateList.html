@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>模板列表</title>
+	</head>
+	<body>
+		<h3>以下只是一个简单的示例，显示与数据低耦合，页面模板完全支持自定义显示形式</h3>
+		<h3></h3>
+		<div>
+			<table>
+				<thead>
+				<tr>
+					<th></th>
+					<th>
+						templateId
+					</th>
+					<th>
+						templateName
+					</th>
+					<th>
+						createTime
+					</th>
+					<th>
+						isDeleted
+					</th>	
+					<th>
+						standBy
+					</th>
+					<th>
+						templateStatus
+					</th>						
+					<th>
+						templateType
+					</th>
+				</tr>
+				</thead>
+				<tbody id="templateTbody">
+					<tr>
+						<td><input type="checkbox" id="boxTempalteId"></td>
+						<td>23432</td>
+					</tr>
+					
+				</tbody>
+			</table>
+		</div>
+		<div>
+			<input type="button" value="add" class="baseOperation"/>
+			<input type="button" value="delete" class="baseOperation"/>
+			<input type="button" value="update" class="baseOperation"/>
+			
+		</div>
+		
+		<h4>这里后期改为弹出</h4>
+		<div id="addOrUpdate">
+			templateName:<input type="text" name="" id="" value="" />
+			templateType:<input type="text" name="" id="" value="" />
+			<input type="button" value="提交" />
+		</div>
+		<script src="../../js/jquery/jquery-1.8.0.min.js"></script>
+		<script src="template.js"></script>
+	</body>
+</html>

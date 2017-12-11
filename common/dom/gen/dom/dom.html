@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<input id="pageTotal" hidden="true" value="12345" />
+		<div id="boxId" class="box">
+			<a href="www.baidu.com">百度</a>
+			<a href="www.baidu.com">阿里</a>
+			<a href="www.baidu.com">腾讯</a>
+			<input type="text" name="phone" />
+		</div>
+
+		<table id="messageContentTable"></table>
+		<div class="table_buttons">
+			<button type="button" onclick="addItem()">添加</button>
+			<button type="button" onclick="deleteItem()">删除</button>
+			<button type="button" onclick="sendMessage()">发送</button>
+			<button type="button" onclick="selectAllItem()">全选</button>
+			<button type="button" onclick="deDelectAllItem()">取消全选</button>
+		</div>
+
+		<table id="talbe1">
+			<thead>
+				<tr>
+					<td></td>
+					<td>姓名</td>
+					<td>分数</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td id="tbody_td1">
+						<div>
+							<input type="checkbox" />
+							<input type="button" />
+						</div>
+					</td>
+					<td>tom</td>
+					<td>110</td>
+				</tr>
+				<tr>
+					<td>
+						<div>
+							<input type="checkbox" />
+							<input type="button" />
+						</div>
+					</td>
+					<td>jack</td>
+					<td>80</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<span id="message">bbbbbbb</span>
+		<input type="text" name="ccccc" />
+		<select id="select1">
+			<option>A</option>
+			<option>B</option>
+		</select>
+
+		<script src="../../../../js/jquery/jquery-1.8.0.min.js"></script>
+		<script type="text/javascript" src="../../js/selfJs/dom.js"></script>
+
+		<script>
+//			$("#message").text("aaaaa");
+			$("#message").html("aaaaa");
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery/jquery-1.8.3.min.js"></script>
+		<script src="../js/selfJs/_WXShare.js"></script>
+		<script src="other/timeUtil.js"></script>
+	</head>
+
+	<body>
+		<div class="city_a" name="jack">
+			<a href="javascript:void(0)">昆明</a>
+			<a href="javascript:void(0)" class="selected">长沙</a>
+			<div class="clear">
+			</div>
+
+			<p>698789-7979879</p>
+		</div>
+
+		<div class="pay_mode_que" style="display: block;">
+			<a href="javascript:void(0)" class="shar wei_img wei_img_se">微信支付</a>
+			<a href="javascript:void(0)" class="zhif_img zhif_img_se">支付宝支付</a>
+			<p></p>
+			<div class="clear"></div>
+		</div>
+
+		<input type="button" name="buttonName" id="buttonId1" value="button1" class="buttonClass" />
+		<input type="checkbox" checked="checked" id="checkbox1" />
+
+		<form action="http://220.165.9.47:6969/BasicDataService.asmx/GetVehicles">
+			
+			<input type="submit" value="data" />
+		</form>
+
+				<div class='layui-input-inline'>
+		   		<select id='refundAccountAdd'>
+	                <option value='0'>支付宝</option>
+	                <option value='1'>微信</option>
+	                <option value='2'>银行卡</option>
+	            </select>
+	        </div>
+
+			<form id="form1" action="http://">
+				<input type="hidden" name="" />
+			</form>
+
+			<a href="http://www.baidu.com" target="_blank" class="title">目 (<span style="color:red";>生物</span>)</a>
+			<span style="color:red">生物</span>分类法
+		<script>
+//			var a = new Object();
+//			a.h1 = 1;
+//			a.h2 = 2;
+//			var b = a;
+//			b.h1 = 5;
+//			console.log(a.h1);
+//
+//			var c = JSON.parse(JSON.stringify(a));
+//			c.h2 = 3;
+//
+//			console.log($("#checkbox1")[0].checked);
+//			for(var key in a) {
+//				console.log(key + ":" + a[key]);
+//			}
+//
+//			fun1_var = function(name) {
+//				console.log("-------" + name);
+//			}
+//
+//			fun1_var.call('tommmmm');
+//
+//			var com = $("#buttonId1");
+//			console.log(com.attr('name'));
+
+//			$.ajax({
+//				type: "post",
+//				url: "http://220.165.9.47:6969/BasicDataService.asmx/GetVehicles",
+//				dataType: "html",
+//				success: function(xml) {
+//					console.log("getdata from server:" + (xml));
+//				}
+//			});
+
+			console.log($("#refundAccountAdd option:selected").val())
+			
+			$('#form1').attr("action","cccc");
+			console.log($('#form1').attr("action"));
+			
+		</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+
+		<input type="button" id="button1" />
+		<input type="button" id="button2" />
+		<li></li>
+		
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+
+
+		<script src="../../../js/jquery/jquery-1.8.0.min.js"></script>
+		<script src="eventHandler.js"></script>
+		<script>
+			var eventHandler = new EventHandler("tom");
+			eventHandler.config.clickHandler=function(){
+				console.log('click');
+			}
+			$("#button1").on('click', eventHandler._clickHandler);
+			
+			
+			$("#button2").click(function(){
+				console.log($("#button2").val());				
+			});
+			
+		</script>
+	</body>
+
+</html>

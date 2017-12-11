@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" id="button1"/>
+		
+		<script src="../../../../js/jquery/jquery-1.8.0.min.js"></script>
+		<script>
+//			function clickHandler(){
+//			   console.log(arguments.length);
+//			   console.log(this);
+//			}
+//			$('#button1').on('click',clickHandler);
+			
+			function clickHandler1(event){
+//				$.each(event, function(name,value) {
+//					console.log(name+":"+value);
+//				});
+				console.log(event.target.id);
+				
+			}
+			$('#button1').on('click',clickHandler1);			
+			
+			
+		</script>
+		
+		
+		
+	</body>
+</html>

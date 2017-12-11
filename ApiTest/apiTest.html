@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<h3>先进行鉴权，鉴权一次即可，然后发起请求</h3>
+		
+		
+		<textarea id="pubkey" rows="15"  style="width:100%" placeholder="输入服务端公钥"></textarea>
+		
+		<input id="servletPath" placeholder="输入请求路径"/>
+		<input id="paramName" placeholder="输入参数名称"/>
+		<textarea id="paramContent" rows="15"  style="width:100%" placeholder="输入参数内容"></textarea>
+		<textarea id="response" rows="15"  style="width:100%" placeholder="这是解密后的返回结果"></textarea>
+		
+		<input type="button" id="button1" value="鉴权" />
+		<input type="button" id="button2" value="发起请求" />
+
+
+		<script src="jquery-1.8.0.min.js"></script>
+		<script src="jsencrypt.js"></script>
+		<script>
+			//签名-鉴权 当前以MTK作为可信客户
+			var sign = "iWWKJpg4MpnZGKeWJNt21Z8YKzbDCPBSKiXpNwwi6Q9BbUxIOF34tIVoXEE6sdgs8j818JjO0k6es/XnVA4lfSFnpE/oKA0aEGwhvpZAgrSj7rhqnImR+0Yc7y/tce90I3mpg55GMZm3ApQ7HAjUudtK3lAqPji45fWddaQX07M=";
+			var publicKeyPrefix="-----BEGIN PUBLIC KEY-----";
+			var publicKeySuffix="-----END PUBLIC KEY-----";
+			var serverPublicKeyString="-----BEGIN PUBLIC KEY-----"+
+				"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCpLeD8LC0I70G9wBVVP65D4AuK"+
+				"YfbhBpFNYl76ztouAcfUbOSSBGotj9smhWE1am3H46SJ1DnrhgFFI0f0MZRBurVq"+
+				"loCRaM3DNPDcORbuU3dOKAcDYRmS/Zsl05/Z3T8F8ZZlaTL8peMjbN18KQA8tNML"+
+				"8IbkRiyDrxwkzS2Z6wIDAQAB"+
+				"-----END PUBLIC KEY-----";
+			//console.log(keyString);
+			
+			//客户端公钥
+			//js平台解密就先暂时不开发了，可以直接断点调试查看返回结果是否正确
+
+			
+			var token;
+
+			//暂时直接把公钥写死
+			$('#pubkey').val(serverPublicKeyString);
+
+			//加密过程
+			function encryptIt(content){
+				// Create the encryption object.
+				var crypt = new JSEncrypt();
+	
+				// Set the private.
+				// crypt.setPrivateKey($('#privkey').val());
+	
+				// Set the public.
+				serverPublicKeyString=publicKeyPrefix+$('#pubkey').val()+publicKeySuffix;
+				var pubkey = serverPublicKeyString;
+				crypt.setPublicKey(pubkey);
+				//console.log(crypt.getPublicKey());
+	
+				// encrypt the values.
+				return crypt.encrypt(content);
+			}
+
+			
+			//解密过程
+			function decryptIt(content){
+				// Create the encryption object.
+				var crypt = new JSEncrypt();
+	
+				//Set the private.
+				crypt.setPrivateKey($('#privkey').val());
+	
+//				// Set the public.
+//				var serverPublicKeyString=publicKeyPrefix+$('#pubkey').val()+publicKeySuffix;
+//				var pubkey = serverPublicKeyString;
+//				crypt.setPublicKey(pubkey);
+//				//console.log(crypt.getPublicKey());
+	
+				// encrypt the values.
+				return crypt.decrypt(content);
+			}
+
+
+
+			//鉴权按钮
+			$("#button1").click(function() {
+				$.ajax({
+					type: "POST",
+					url: "http://localhost/reliableClient/authenticate",
+					data: {
+						'clientName': 'MTK',
+						'sign': sign
+					},
+					dataType: "json",
+					success: function(data) {
+						console.log("getdata from server:" + JSON.stringify(data));
+						token = data.data;
+					}
+				});
+			});
+
+			//发送加密数据按钮
+			$("#button2").click(function() {
+				var servletPath=$('#servletPath').val();
+				var paramName=$('#paramName').val();
+				var paramContent=$('#paramContent').val();
+				
+				
+				//或者不从输入框输入，直接写死
+				servletPath="getAccompaniesByOrderId";
+				paramName="postjson";
+				var o=new Object();
+				o.orderId="TF2017080200172";
+				
+				paramContent=JSON.stringify(o);//这里本来是一个json
+				paramContent=encryptIt(paramContent);
+				
+				$.ajax({
+					type: "POST",
+					url: "http://localhost/thirdPartyApi/"+servletPath,
+					data: {
+						'postjson': paramContent,
+						'token': token
+					},
+					dataType: "json",
+					success: function(data) {
+						//对参数进行解密 并放置到textarea框中
+						
+						console.log("getdata from server:" + JSON.stringify(data));
+					}
+				});
+			});
+			
+
+		</script>
+	</body>
+
+</html>

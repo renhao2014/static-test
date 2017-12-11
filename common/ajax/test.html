@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../../js/jquery/jquery-1.8.3.min.js"></script>
+		<script src="ajaxExtend.js"></script>
+	</head>
+	<body>
+		
+		<textarea id="textarea1" style="width: 200px;height: 50px;" >bbb</textarea>
+		<input id="button1" type="button"/>
+		
+		<script>
+		var testUrl="http://localhost:9999/test/jsonTest";
+			$("#button1").click(function(){
+//				console.log($("#textarea1").html());
+//				console.log($("#textarea1").val());
+				$.simpleAjax(testUrl,null,function(data){
+					console.log("receive:"+JSON.stringify(data));
+				})
+			});
+			
+			
+				//获取当前约束条件  包括分页信息，查询条件信息等
+	//翻页、点击查询会触发此方法
+	function getCurrentRestraintJson(){
+	  //此处仅供测试，实际需要读取标签值
+	  var databaseInfo=new Object();
+	  //template.templateName=$("#templateNameQuery").val();
+	  var vo=new Object();
+	  vo.page=1;
+	  vo.pageSize=2;
+	  vo.databaseInfo=databaseInfo;
+	  return JSON.stringify(vo);
+	}
+			
+	console.log(getCurrentRestraintJson())		
+//			$.ajax({
+//				type: "GET",
+//				url: "http://localhost:8031/thirdPartyApi/getAccompaniesByOrderId",
+//				data:{'postjson':'1234'},
+//				dataType: "json",
+////				contentType:"json",
+//				success: function(data) {
+//					console.log("getdata from server:" + JSON.stringify(data));
+//				}
+//			});			
+//			console.log('1111');
+
+		</script>
+
+	</body>
+</html>

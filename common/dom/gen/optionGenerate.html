@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+
+		<select id="templateSelect">
+			<option value=11111>Volvo</option>
+			<option value=22222 selected="selected">Fiat</option>
+		</select>
+
+
+<div id="select1">
+	
+</div>
+		<script src="../../js/jquery/jquery-1.8.0.min.js"></script>
+		<script>
+			function getCurrentRestraintJson() {
+				//此处仅供测试，实际需要读取标签值
+				var template = new Object();
+				var dynamicQueryVo = new Object();
+				dynamicQueryVo.page = 0;
+				dynamicQueryVo.pageSize = 10;
+				dynamicQueryVo.template = template;
+				return JSON.stringify(dynamicQueryVo);
+			}
+
+			//			$.ajax({
+			//				type: "get",
+			//				url: "http://localhost/template/queryDynamic",
+			//				data: {'queryRestraintJson':getCurrentRestraintJson()},
+			//				dataType: "json", 
+			//				success: function(data) {
+			//					console.log("getdata from server:" + JSON.stringify(data));
+			//					generateSelect(data.data);
+			//				}
+			//			});
+
+	//通用
+//根据数据绘制各种页面组件
+
+
+//根据list绘制select
+function generateSelect(selectId, list, valueName, contentName) {
+	var selectHtml = new String();
+	selectHtml=selectHtml+
+	"<div class='layui-input-inline' id='"+selectId+"Div'>"+
+	"<select id='"+selectId+"'>";
+	for(i = 0; i < list.length; i++) {
+		selectHtml = selectHtml +
+			"<option value='" + list[i][valueName] + "'>" + list[i][contentName] + "</option>";
+	}
+	selectHtml=selectHtml+
+	"</select>"+
+	"</div>";
+	return selectHtml;
+}
+
+//根据url绘制select
+//传入selectId,list,value名称，content名称  接口名称
+function renderSelect(selectId, ajaxUrl,param, valueName, contentName) {
+	$.ajax({
+		type: "get",
+		url: ajaxUrl,
+		data: {
+			'queryRestraintJson': param
+		},
+		dataType: "json",
+		success: function(data) {
+			console.log("getdata from server:" + JSON.stringify(data));
+			generateSelect(selectId, data.data, valueName, contentName);
+		}
+	});
+}
+
+//使用示例
+var html=renderSelect("templateSelect", "http://localhost/template/queryDynamic",getCurrentRestraintJson(), "templateId", "templateName");
+
+			renderSelect("templateSelect", "http://localhost/template/queryDynamic",getCurrentRestraintJson(), "templateId", "templateName");
+			
+		</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../easyui/jquery.min.js"></script>
+	</head>
+
+	<body>
+		<script>
+			var string1 = "乘客${name}您好您订单号为${order}的";
+
+			var patt1 = new RegExp("\\$\\{[A-z]+\\}","g");
+			var matchs=patt1.exec(string1);
+			console.log("------"+matchs)  ;
+			
+			
+			var matchs1=string1.match(/\$\{[a-zA-Z]+\}/g);
+			console.log(matchs1[0]);
+			string1.replace(matchs1[0],"gjh");
+			console.log(string1);
+			
+		</script>
+
+	</body>
+
+</html>

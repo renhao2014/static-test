@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../jquery/jquery-1.8.0.min.js"></script>
+	</head>
+	<!--radio和checkbox都没有父容器-->
+	<!--radio和check都是通过名称聚类，通过是否有checked属性来表示是否被选中-->
+	<input name="checkbox1" type="checkbox" value="0"><br/>
+	<input name="checkbox1" type="checkbox" value="1"><br/>
+
+	<input name="radio1" value="0" type="radio"><br/>
+	<input name="radio1" value="1" type="radio"><br/>
+
+	<select id="select1" name="select">
+		<option value="volvo">Volvo</option>
+		<option value="fiat">Fiat</option>
+	</select>
+
+	<input type="button" onclick="test()" value="测试"/>
+
+	<body>
+		<script src="../../../js/jquery/jquery-1.8.0.min.js"></script>
+		<script>
+			//获取被选中的radio
+			function getSelectedRadio(name) {
+				return $("input[name='" + name + "']:checked").val();
+			}
+
+			//获取被选中的checkbox
+			function getSelectedBoxs(name) {
+				var selectedBoxs = new Array();
+				var checkboxs = $("input[name='" + name + "']:checked");
+				var i = 0;
+				checkboxs.each(function(index, item) {
+					selectedBoxs[i] = item.value;
+					i++;
+				});
+				return selectedBoxs;
+			}
+
+
+
+			//全选/全不选checkbox
+			function handleAllBox(name, isSelcted) {
+				$("input[name='" + name + "']").attr('checked', isSelcted);
+			}
+
+			//被选中的select	
+			function getSelectedSelect(name) {
+				return $("#" + name + " option:selected").val();
+			}
+
+
+
+			function read() {
+				var radioValue = getSelectedRadio('radio1');
+				console.log("radioValue:" + radioValue);
+
+				var boxValues = getSelectedBoxs('checkbox1');
+				console.log("boxs:" + boxValues.toString());
+
+				var selectedSelect = getSelectedSelect('select1');
+				console.log("selectedSelect:" + selectedSelect);
+				
+				//console.log($("#select1")[0].type);
+				
+			}
+
+			function test(){
+				read();
+			}
+
+			//注册button事件：
+			$("#button1").click(function() {});
+			
+			
+			
+			
+		</script>
+	</body>
+
+</html>
