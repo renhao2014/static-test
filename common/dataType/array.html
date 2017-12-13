@@ -38,14 +38,16 @@
 //		}
 
         var a=new Array();
-        a.push("1");
-        a.push("2");
-        a.push("3");
+        a.push("a");//写末端
+        a.push("b");
+        a.push("c");
 
+        console.log(a.shift());//读首端
+        console.log(a.pop());//读末端
         console.log(a.unshift());
-        a.pop();
-        console.log(a.unshift());
+		console.log(a.length);
 
+		
 		</script>
 	</body>
 </html>
