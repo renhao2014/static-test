@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script src="../js/ext-all.js"></script>
+
+		<script>
+			Ext.application({
+				name: 'MyApp',
+				launch: function() {
+					Ext.create('Ext.container.Viewport', {
+						items: {
+							html: 'My App'
+						}
+						
+					});
+				}
+			});
+			
+			
+			console.log("执行完毕");
+		</script>
+
+	</body>
+
+</html>
