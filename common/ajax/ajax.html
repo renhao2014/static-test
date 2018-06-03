@@ -1,13 +1,14 @@
 ﻿<!DOCTYPE html>
 <html>
-
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<script src="../../js/jquery/jquery-1.8.0.min.js"></script>
+		
 	</head>
 
 	<body>
+		
+		<script src="../js/jquery/jquery-1.8.0.min.js"></script>
 		<script>
 			
 //			var orderItemsArray=new Array(10);
@@ -31,29 +32,71 @@
 			var orderVO=new Object();
 			orderVO.order=order;
 			
-			var obj={
-			  "qrcode": "1",
-			  "start_coord": {
-			    "lng": 102.795198,
-			    "lat": 25.042897
-			  },
-			  "start_date": "2017-06-26 09:34:00",
-			  "start_place": "昆明长水机场"
-			}
-			
-			
+//			$.ajax({
+//				type: "POST",
+//				url: "http://localhost/gj_manage/manage/order/OrderCancel",
+//				data:orderVO,
+//				dataType: "json",
+//				success: function(data) {
+//					console.log("getdata from server:" + JSON.stringify(data));
+//				}
+//			});
+
+			var volatileVariable=0;
 			$.ajax({
-				type: "POST",
-				url: "http://localhost:8031/thirdPartyApi/onCar",
-				data:{'postjson':JSON.stringify(obj)},
+				type: "get",
+				url: "http://localhost/test/jsonTest",
+				data:orderVO,
+				async:false,
 				dataType: "json",
 				success: function(data) {
-					console.log("getdata from server:" + JSON.stringify(data));
-				},
-				error:function(data1){
-					console.log(JSON.stringify(data1));
+					if (data.code==200) {
+						console.log("getdata from server:" + JSON.stringify(data));
+						volatileVariable=1;
+					} else{
+						console.log(data.message)
+					}
 				}
 			});
+			
+			
+			
+			console.log(volatileVariable);
+			
+			//封装ajax数据获取及其异步回调
+			function doWithTemplateData(fun,paramForFun){
+				$.ajax({
+					type: "get",
+					url: "http://localhost/test/jsonTest",
+					data:orderVO,
+					async:true,
+					dataType: "json",
+					success: function(data) {
+						if (data.code==200) {
+							fun(data.msg,paramForFun);
+						} else{
+							console.log(data.message)
+						}
+					}
+				});
+				
+			}
+			
+			function fun1(data,param2){
+				console.log("hi,"+data);
+				console.log("param2,"+JSON.stringify(param2));				
+			}
+			
+			function fun2(data,param2){
+				console.log("hello,"+data);
+				console.log("param2,"+JSON.stringify(param2));		
+			}
+
+			
+			doWithTemplateData(fun1,orderVO);
+			doWithTemplateData(fun2,[1,2,3]);
+			
+
 		</script>
 	</body>
 
