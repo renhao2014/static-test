@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<!--
+浮动布局
+绝对定位并未物理中的绝对值，而是指位置不是相对于其他对象，仍然是支持比例描述的，不过比例也是基于父元素	
+	
+	
+-->
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	
+	<style  type="text/css">
+		/*绝对定位*/
+		#absolute1{
+			position: absolute;
+			left: 10%;
+			/*top: 20px;*/
+			width: 50px;
+			height: 50px;
+		}
+		#absolute2{
+			position: absolute;
+			left: 20%;
+		}
+ 		#absolute2 h1{
+			margin: 0;
+		}
+	</style>
+</head>
+
+<body>
+	<div style="width:100%;">
+		<div style="width:10%; float:left;  height: 200px; background: #cccccc; ">div1</div>
+		<div style="width:40%; float:left;  height: 200px; background: #aaaaaa; text-align: right;">div2</div>
+		<div style="width:40%; float:left;  height: 200px; background: #999999;">div3</div>
+		<div style="width:10%; float:left;  height: 200px; background: #777777;">div4</div>
+	</div>
+	<div id="absolute1">
+		<img src="../images/logo.png"/>
+	</div>
+	<div id="absolute2">
+		<h1>首页</h1>
+	</div>
+
+
+
+</body>
+
+</html>
