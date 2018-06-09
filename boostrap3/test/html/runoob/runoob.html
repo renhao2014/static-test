@@ -2,30 +2,48 @@
 <html lang="zh-CN">
 	<head>
 		<meta charset="UTF-8">
-		<title>初始化</title>
+		<title>模仿runoob</title>
 		<link href="../../../css/bootstrap.css" rel="stylesheet">
 	</head>
 	<style>
 		body{
-			color: #333
+			background-color:#f6f6f6;
+		
 		}
 		.title{
 			font: "微软雅黑";
 			font-size: xx-large;
 			font-weight: bold;
+			
 		}
 		.head{
+			margin-top: 15px;
 			margin-bottom: 20px;
+			
 		}
 		.list-group-item.active{
-			 background:gray;
+			 background-color: #96b97d;
+			 border-color: #96b97d;
 		}
+		
 		
 		#search{
 			margin-top: 25px;
 		}
 		#knowledgeType{
-			background-color:#00BE67;
+			background-color:#96b97d;
+		}
+		#nav{
+			background-color: #96b97d;
+			margin-bottom: 30px;
+		}
+		#nav a{
+			margin-right: 3px;
+		}
+		#next{
+			margin-bottom: 20px;
+			margin-top: 5px;
+			font-size:small;
 		}
 	</style>
 	
@@ -40,61 +58,66 @@
 				<div class="col-md-4 column">
 				</div>
 				<div class="col-md-4 column">
-					<input type="email" class="form-control" id="search" placeholder="搜索......"/>
+					<input type="text" class="form-control" id="search" placeholder="搜索......"/>
 				</div>
 			</div>
 			
 			<div class="row clearfix">
 				<div class="col-md-12 column">
-					<nav class="navbar navbar-default" role="navigation">
+					<nav class="navbar navbar-default" role="navigation"  id="nav">
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav">
-								<li><a href="#">Link</a></li>
-								<li><a href="#">Link</a></li>
-								<li><a href="#">Link</a></li>
-								<li><a href="#">Link</a></li>
-								<li><a href="#">Link</a></li>
-								<li><a href="#">Link</a></li>
-								<li><a href="#">Link</a></li>
-								<li><a href="#">Link</a></li>
-								<li><a href="#">Link</a></li>
-								<li><a href="#">Link</a></li>
-								<li><a href="#">Link</a></li>
-								<li><a href="#">Link</a></li>
-								<li><a href="#">Link</a></li>
-								<li><a href="#">Link</a></li>
-								<li><a href="#">Link</a></li>
+								<li><a href="https://www.baidu.com" target="_blank" style="color: white;">首页</a></li>
+								<li><a href="https://www.baidu.com" target="_blank" style="color: white;">Jquery</a></li>
+								<li><a href="https://www.baidu.com" target="_blank" style="color: white;">Css</a></li>
+								<li><a href="https://www.baidu.com" target="_blank" style="color: white;">SpringBoot</a></li>
+								<li><a href="https://www.baidu.com" target="_blank" style="color: white;">Dubbo</a></li>
+								<li><a href="https://www.baidu.com" target="_blank" style="color: white;">MySQL</a></li>
+								<li><a href="https://www.baidu.com" target="_blank" style="color: white;">Oracle</a></li>
+								<li><a href="https://www.baidu.com" target="_blank" style="color: white;">Java</a></li>
+								<li><a href="https://www.baidu.com" target="_blank" style="color: white;">c语言</a></li>
+								<li><a href="https://www.baidu.com" target="_blank" style="color: white;">Python</a></li>
+								<li><a href="https://www.baidu.com" target="_blank" style="color: white;">Golang</a></li>
+								<li><a href="https://www.baidu.com" target="_blank" style="color: white;">Hadoop</a></li>
+								<li><a href="https://www.baidu.com" target="_blank" style="color: white;">Spark</a></li>
+								<li><a href="https://www.baidu.com" target="_blank" style="color: white;">Mybatis</a></li>
 							</ul>
 						</div>
 					</nav>
 				</div>
 			</div>
 			
+			
 			<div class="row clearfix">
 				<div class="col-md-2 column">
 					<div class="list-group">
 					 	<a href="#" class="list-group-item active">Home</a>
-						<div class="list-group-item">AAA</div>
-						<div class="list-group-item">BBB</div>
-						<div class="list-group-item">CCC</div>
+						<div class="list-group-item"><a href="https://www.baidu.com" target="_blank">AAA</a></div>
+						<div class="list-group-item"><a href="https://www.baidu.com" target="_blank">BBB</a></div>
+						<div class="list-group-item"><a href="https://www.baidu.com" target="_blank">CCC</a></div>
 					</div>
 					<div class="list-group">
 					 	<a href="#" class="list-group-item active">Home</a>
-						<div class="list-group-item">AAA</div>
-						<div class="list-group-item">BBB</div>
-						<div class="list-group-item">CCC</div>
-						<div class="list-group-item">DDD</div>
-						<div class="list-group-item">EEE</div>
-						<div class="list-group-item">FFF</div>
+						<div class="list-group-item"><a href="https://www.baidu.com" target="_blank">AAA</a></div>
+						<div class="list-group-item"><a href="https://www.baidu.com" target="_blank">BBB</a></div>
+						<div class="list-group-item"><a href="https://www.baidu.com" target="_blank">CCC</a></div>
+						<div class="list-group-item"><a href="https://www.baidu.com" target="_blank">DDD</a></div>
+						<div class="list-group-item"><a href="https://www.baidu.com" target="_blank">EEE</a></div>
+						<div class="list-group-item"><a href="https://www.baidu.com" target="_blank">FFF</a></div>
 					</div>
 					<div class="list-group">
 					 	<a href="#" class="list-group-item active">Home</a>
-						<div class="list-group-item">AAA</div>
-						<div class="list-group-item">BBB</div>
-						<div class="list-group-item">CCC</div>
+						<div class="list-group-item"><a href="https://www.baidu.com" target="_blank">AAA</a></div>
+						<div class="list-group-item"><a href="https://www.baidu.com" target="_blank">BBB</a></div>
+						<div class="list-group-item"><a href="https://www.baidu.com" target="_blank">CCC</a></div>
 					</div>
 				</div>
 				<div class="col-md-8 column">
+					<div class="row clearfix" id="next">
+						<div class="col-md-12 column">
+						<button class="btn"><span class="glyphicon glyphicon-arrow-left"></span>  上一节</button>   <button class="pull-right btn">下一节  <span class="glyphicon glyphicon-arrow-right"></span></button>
+						</div>
+					</div>
 					<div>
 						<h4>Bootstrap 简介</h4>
 					</div>
@@ -121,24 +144,24 @@
 				<div class="col-md-2 column">
 					<div class="list-group">
 					 	<a href="#" class="list-group-item active">Home</a>
-						<div class="list-group-item">AAA</div>
-						<div class="list-group-item">BBB</div>
-						<div class="list-group-item">CCC</div>
+						<div class="list-group-item"><a href="https://www.baidu.com" target="_blank">AAA</a></div>
+						<div class="list-group-item"><a href="https://www.baidu.com" target="_blank">BBB</a></div>
+						<div class="list-group-item"><a href="https://www.baidu.com" target="_blank">CCC</a></div>
 					</div>
 					<div class="list-group">
 					 	<a href="#" class="list-group-item active">Home</a>
-						<div class="list-group-item">AAA</div>
-						<div class="list-group-item">BBB</div>
-						<div class="list-group-item">CCC</div>
+						<div class="list-group-item"><a href="https://www.baidu.com" target="_blank">AAA</a></div>
+						<div class="list-group-item"><a href="https://www.baidu.com" target="_blank">BBB</a></div>
+						<div class="list-group-item"><a href="https://www.baidu.com" target="_blank">CCC</a></div>
 					</div>
 					<div class="list-group">
 					 	<a href="#" class="list-group-item active">Home</a>
-						<div class="list-group-item">AAA</div>
-						<div class="list-group-item">BBB</div>
-						<div class="list-group-item">CCC</div>
-						<div class="list-group-item">ZZZ</div>
-						<div class="list-group-item">YYY</div>
-						<div class="list-group-item">XXX</div>
+						<div class="list-group-item"><a href="https://www.baidu.com" target="_blank">AAA</a></div>
+						<div class="list-group-item"><a href="https://www.baidu.com" target="_blank">BBB</a></div>
+						<div class="list-group-item"><a href="https://www.baidu.com" target="_blank">CCC</a></div>
+						<div class="list-group-item"><a href="https://www.baidu.com" target="_blank">ZZZ</a></div>
+						<div class="list-group-item"><a href="https://www.baidu.com" target="_blank">YYY</a></div>
+						<div class="list-group-item"><a href="https://www.baidu.com" target="_blank">XXX</a></div>
 					</div>
 				</div>
 			</div>
