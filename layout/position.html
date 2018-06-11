@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		.content_fixed{
+			position: fixed;
+			bottom: 0;
+			left:40%;
+		}
+		.content_absolute_body{
+			position: absolute;
+			left: 40px;
+			top: 200px;
+			z-index: 1;
+		}
+		.content_absolute_parent{
+			position: absolute;
+			left: 80px;
+			top: 20px;
+		}
+		.content_relative{
+			position: relative;
+			bottom: 10px;
+			left: 10px;
+		}
+		
+	</style>
+	<body>
+		<!--Fix-->
+		<div class="content_fixed">Fix</div>
+		
+		<!--static 在普通的流中 天蓝色-->
+		<div style="height: 100px;background-color: lightblue;margin-right: 40px;" ></div>
+		
+		<!--基于body的absolute-->
+		<div class="content_absolute_body">我是相对于body的absolute</div>
+		
+		<!--relative中包含absolute-->
+		<div style="position:relative;width: 300px;height: 200px;background-color: gray;margin-left: 40px;">
+			<div class="content_absolute_parent">我是相对于parent的absolute</div>
+		</div>
+		
+		<div class="content_relative" style="width: 40px;height: 40px;background-color: lightgreen;"></div>
+		<div class="content_relative1" style="width: 40px;height: 40px;background-color: lightseagreen;"></div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</body>
+</html>
