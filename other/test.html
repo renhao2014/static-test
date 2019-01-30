@@ -1,0 +1,2427 @@
+<!doctype html>
+<html lang="zh" data-hairline="true" data-theme="light">
+
+	<head>
+		<meta charSet="utf-8" />
+		<title data-react-helmet="true">微调 - 知乎</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+		<meta name="renderer" content="webkit" />
+		<meta name="force-rendering" content="webkit" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="google-site-verification" content="FTeR0c8arOPKh8c5DYh_9uu98_zJbaWw53J-Sch9MTg" />
+		<title>知乎 - 有问题上知乎</title>
+		<meta name="description" content="有问题，上知乎。知乎是中文互联网知名知识分享平台，以「知识连接一切」为愿景，致力于构建一个人人都可以便捷接入的知识分享网络，让人们便捷地与世界分享知识、经验和见解，发现更大的世界。" />
+		<link data-react-helmet="true" rel="prefetch" href="https://pic4.zhimg.com/80/v2-315ee030f89c96060aad5842c97f249f_r.jpg" />
+		<link rel="shortcut icon" type="image/x-icon" href="https://static.zhihu.com/static/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="https://static.zhihu.com/static/search.xml" title="知乎" />
+		<link rel="dns-prefetch" href="//static.zhimg.com" />
+		<link rel="dns-prefetch" href="//pic1.zhimg.com" />
+		<link rel="dns-prefetch" href="//pic2.zhimg.com" />
+		<link rel="dns-prefetch" href="//pic3.zhimg.com" />
+		<link rel="dns-prefetch" href="//pic4.zhimg.com" />
+		<link href="https://static.zhihu.com/heifetz/main.app.4169e3692e63e538ef9e.css" rel="stylesheet" />
+		<script defer="" crossOrigin="anonymous" src="https://unpkg.zhimg.com/@cfe/sentry-script@latest/dist/init.js" data-sentry-config="{&quot;dsn&quot;:&quot;https://65e244586890460588f00f2987137aa8@crash2.zhihu.com/193&quot;,&quot;sampleRate&quot;:0.1,&quot;release&quot;:&quot;942-bfb7c1c4&quot;,&quot;ignoreErrorNames&quot;:[&quot;NetworkError&quot;,&quot;SecurityError&quot;],&quot;ignoreErrors&quot;:[&quot;origin message&quot;,&quot;Network request failed&quot;,&quot;Loading chunk&quot;,&quot;这个系统不支持该功能。&quot;,&quot;Can&#x27;t find variable: webkit&quot;,&quot;Can&#x27;t find variable: $&quot;,&quot;内存不足&quot;,&quot;out of memory&quot;,&quot;DOM Exception 18&quot;,&quot;zfeedback sdk 初始化失败！&quot;,&quot;zfeedback sdk 加载失败！&quot;,&quot;The operation is insecure&quot;,&quot;[object Event]&quot;,&quot;[object FileError]&quot;,&quot;[object DOMError]&quot;,&quot;[object Object]&quot;,&quot;拒绝访问。&quot;,&quot;Maximum call stack size exceeded&quot;,&quot;UploadError&quot;,&quot;无法 fetch&quot;,&quot;draft-js&quot;,&quot;缺少 JavaScript 对象&quot;,&quot;componentWillEnter&quot;,&quot;componentWillLeave&quot;,&quot;componentWillAppear&quot;,&quot;getInlineStyleAt&quot;,&quot;getCharacterList&quot;],&quot;whitelistUrls&quot;:[&quot;static.zhihu.com&quot;]}"></script>
+		<script nonce="4cecee78-4649-4c95-a66f-a9d6e62d930a">
+			if(window.requestAnimationFrame) {
+				window.requestAnimationFrame(function() {
+					window.FIRST_ANIMATION_FRAME = Date.now();
+				});
+			}
+		</script>
+	</head>
+
+	<body class="Entry-body">
+		<div id="root">
+			<div data-zop-usertoken="{}" data-reactroot="">
+				<div class="LoadingBar"></div>
+				<div>
+					<header role="banner" class="Sticky AppHeader" data-za-module="TopNavBar">
+						<div class="AppHeader-inner">
+							<a href="//www.zhihu.com" aria-label="知乎">
+								<svg viewBox="0 0 200 91" class="Icon ZhihuLogo ZhihuLogo--blue Icon--logo" style="height:30px;width:64px" width="64" height="30" aria-hidden="true">
+									<title></title>
+									<g>
+										<path d="M53.29 80.035l7.32.002 2.41 8.24 13.128-8.24h15.477v-67.98H53.29v67.978zm7.79-60.598h22.756v53.22h-8.73l-8.718 5.473-1.587-5.46-3.72-.012v-53.22zM46.818 43.162h-16.35c.545-8.467.687-16.12.687-22.955h15.987s.615-7.05-2.68-6.97H16.807c1.09-4.1 2.46-8.332 4.1-12.708 0 0-7.523 0-10.085 6.74-1.06 2.78-4.128 13.48-9.592 24.41 1.84-.2 7.927-.37 11.512-6.94.66-1.84.785-2.08 1.605-4.54h9.02c0 3.28-.374 20.9-.526 22.95H6.51c-3.67 0-4.863 7.38-4.863 7.38H22.14C20.765 66.11 13.385 79.24 0 89.62c6.403 1.828 12.784-.29 15.937-3.094 0 0 7.182-6.53 11.12-21.64L43.92 85.18s2.473-8.402-.388-12.496c-2.37-2.788-8.768-10.33-11.496-13.064l-4.57 3.627c1.363-4.368 2.183-8.61 2.46-12.71H49.19s-.027-7.38-2.372-7.38zm128.752-.502c6.51-8.013 14.054-18.302 14.054-18.302s-5.827-4.625-8.556-1.27c-1.874 2.548-11.51 15.063-11.51 15.063l6.012 4.51zm-46.903-18.462c-2.814-2.577-8.096.667-8.096.667s12.35 17.2 12.85 17.953l6.08-4.29s-8.02-11.752-10.83-14.33zM199.99 46.5c-6.18 0-40.908.292-40.953.292v-31.56c1.503 0 3.882-.124 7.14-.376 12.773-.753 21.914-1.25 27.427-1.504 0 0 3.817-8.496-.185-10.45-.96-.37-7.24 1.43-7.24 1.43s-51.63 5.153-72.61 5.64c.5 2.756 2.38 5.336 4.93 6.11 4.16 1.087 7.09.53 15.36.277 7.76-.5 13.65-.76 17.66-.76v31.19h-41.71s.88 6.97 7.97 7.14h33.73v22.16c0 4.364-3.498 6.87-7.65 6.6-4.4.034-8.15-.36-13.027-.566.623 1.24 1.977 4.496 6.035 6.824 3.087 1.502 5.054 2.053 8.13 2.053 9.237 0 14.27-5.4 14.027-14.16V53.93h38.235c3.026 0 2.72-7.432 2.72-7.432z" fill-rule="evenodd" />
+									</g>
+								</svg>
+							</a>
+							<nav role="navigation" class="AppHeader-nav">
+								<a class="AppHeader-navItem" href="//www.zhihu.com/" data-za-not-track-link="true">首页</a>
+								<a class="AppHeader-navItem" href="//www.zhihu.com/explore" data-za-not-track-link="true">发现</a>
+								<a href="//www.zhihu.com/topic" class="AppHeader-navItem" data-za-not-track-link="true">话题</a>
+							</nav>
+							<div class="SearchBar" role="search" data-za-module="PresetWordItem">
+								<div class="SearchBar-toolWrapper">
+									<form class="SearchBar-tool">
+										<div>
+											<div class="Popover">
+												<div class="SearchBar-input Input-wrapper Input-wrapper--grey"><input type="text" maxLength="100" value="" autoComplete="off" role="combobox" aria-expanded="false" aria-autocomplete="list" aria-activedescendant="null--1" id="null-toggle" aria-haspopup="true" aria-owns="null-content" class="Input" placeholder="" />
+													<div class="Input-after"><button aria-label="搜索" type="button" class="Button SearchBar-searchIcon Button--primary"><span style="display:inline-flex;align-items:center">​<svg class="Zi Zi--Search" fill="currentColor" viewBox="0 0 24 24" width="18" height="18"><path d="M17.068 15.58a8.377 8.377 0 0 0 1.774-5.159 8.421 8.421 0 1 0-8.42 8.421 8.38 8.38 0 0 0 5.158-1.774l3.879 3.88c.957.573 2.131-.464 1.488-1.49l-3.879-3.878zm-6.647 1.157a6.323 6.323 0 0 1-6.316-6.316 6.323 6.323 0 0 1 6.316-6.316 6.323 6.323 0 0 1 6.316 6.316 6.323 6.323 0 0 1-6.316 6.316z" fill-rule="evenodd"></path></svg></span></button></div>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+							<div class="AppHeader-userInfo">
+								<div class="AppHeader-profile">
+									<div><button type="button" class="Button AppHeader-login Button--blue">登录</button><button type="button" class="Button Button--primary Button--blue">加入知乎</button></div>
+								</div>
+							</div>
+						</div>
+					</header>
+				</div>
+				<main role="main" class="App-main">
+					<div itemProp="people" itemType="http://schema.org/Person" itemscope="">
+						<meta itemProp="url" content="https://www.zhihu.com/people/breaknever" />
+						<meta itemProp="gender" content="Female" />
+						<meta itemProp="image" content="https://pic4.zhimg.com/v2-4e988956c93a819e719cee6e33d0b773_is.jpg" />
+						<meta itemProp="zhihu:voteupCount" content="48507" />
+						<meta itemProp="zhihu:thankedCount" content="6891" />
+						<meta itemProp="zhihu:followerCount" content="45658" />
+						<meta itemProp="zhihu:answerCount" content="127" />
+						<meta itemProp="zhihu:articlesCount" content="35" />
+						<div id="ProfileHeader" class="ProfileHeader">
+							<div class="Card">
+								<div class="ProfileHeader-userCover">
+									<div class="UserCover">
+										<div class="VagueImage UserCover-image" data-src="https://pic4.zhimg.com/80/v2-315ee030f89c96060aad5842c97f249f_r.jpg">
+											<div class="VagueImage-mask is-active"></div>
+										</div>
+									</div>
+								</div>
+								<div class="ProfileHeader-wrapper">
+									<div class="ProfileHeader-main">
+										<div class="UserAvatar ProfileHeader-avatar" style="top:-25px"><img class="Avatar Avatar--large UserAvatar-inner" width="160" height="160" src="https://pic4.zhimg.com/v2-4e988956c93a819e719cee6e33d0b773_xl.jpg" srcSet="https://pic4.zhimg.com/v2-4e988956c93a819e719cee6e33d0b773_xll.jpg 2x" /></div>
+										<div class="ProfileHeader-content">
+											<div class="ProfileHeader-contentHead">
+												<h1 class="ProfileHeader-title"><span class="ProfileHeader-name">微调</span><span class="RichText ztext ProfileHeader-headline">数据挖掘</span></h1></div>
+											<div style="overflow:hidden;transition:height 300ms ease-out" class="ProfileHeader-contentBody">
+												<div>
+													<div class="ProfileHeader-info">
+														<div class="ProfileHeader-infoItem">
+															<div class="ProfileHeader-iconWrapper">
+																<svg viewBox="0 0 20 18" class="Icon Icon--company" style="height:16px;width:13px" width="13" height="16" aria-hidden="true">
+																	<title></title>
+																	<g>
+																		<path d="M15 3.998v-2C14.86.89 13.98 0 13 0H7C5.822 0 5.016.89 5 2v2l-3.02-.002c-1.098 0-1.97.89-1.97 2L0 16c0 1.11.882 2 1.98 2h16.033c1.1 0 1.98-.89 1.987-2V6c-.007-1.113-.884-2.002-1.982-2.002H15zM7 4V2.5s-.004-.5.5-.5h5c.5 0 .5.5.5.5V4H7z" />
+																	</g>
+																</svg>
+															</div>咨询分析</div>
+														<div class="ProfileHeader-infoItem">
+															<div class="ProfileHeader-iconWrapper">
+																<svg width="14" height="16" viewBox="0 0 12 16" class="Icon Icon--female" style="height:16px;width:14px" aria-hidden="true">
+																	<title></title>
+																	<g>
+																		<path d="M6 0C2.962 0 .5 2.462.5 5.5c0 2.69 1.932 4.93 4.485 5.407-.003.702.01 1.087.01 1.087H3C1.667 12 1.667 14 3 14s1.996-.006 1.996-.006v1c0 1.346 2.004 1.346 1.998 0-.006-1.346 0-1 0-1S7.658 14 8.997 14c1.34 0 1.34-2-.006-2.006H6.996s-.003-.548-.003-1.083C9.555 10.446 11.5 8.2 11.5 5.5 11.5 2.462 9.038 0 6 0zM2.25 5.55C2.25 3.48 3.93 1.8 6 1.8c2.07 0 3.75 1.68 3.75 3.75C9.75 7.62 8.07 9.3 6 9.3c-2.07 0-3.75-1.68-3.75-3.75z" fill-rule="evenodd" />
+																	</g>
+																</svg>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="ProfileHeader-contentFooter"><button type="button" class="Button ProfileHeader-expandButton Button--plain"><svg viewBox="0 0 10 6" class="Icon ProfileHeader-arrowIcon Icon--arrow" style="height:16px;width:10px" width="10" height="16" aria-hidden="true"><title></title><g><path d="M8.716.217L5.002 4 1.285.218C.99-.072.514-.072.22.218c-.294.29-.294.76 0 1.052l4.25 4.512c.292.29.77.29 1.063 0L9.78 1.27c.293-.29.293-.76 0-1.052-.295-.29-.77-.29-1.063 0z"/></g></svg>查看详细资料</button>
+												<div class="MemberButtonGroup ProfileButtonGroup ProfileHeader-buttons"><button type="button" class="Button FollowButton Button--primary Button--blue"><span style="display:inline-flex;align-items:center">​<svg class="Zi Zi--Plus FollowButton-icon" fill="currentColor" viewBox="0 0 24 24" width="1.2em" height="1.2em"><path d="M13.491 10.488s-.012-5.387 0-5.998c-.037-1.987-3.035-1.987-2.997 0-.038 1.912 0 5.998 0 5.998H4.499c-1.999.01-1.999 3.009 0 3.009s5.995-.01 5.995-.01v5.999c0 2.019 3.006 2.019 2.997 0-.01-2.019 0-5.998 0-5.998s3.996.009 6.004.009c2.008 0 2.008-3-.01-3.009h-5.994z" fill-rule="evenodd"></path></svg></span>关注她</button><button type="button" class="Button Button--grey Button--withIcon Button--withLabel"><span style="display:inline-flex;align-items:center">​<svg class="Zi Zi--Comments Button-zi" fill="currentColor" viewBox="0 0 24 24" width="1.2em" height="1.2em"><path d="M11 2c5.571 0 9 4.335 9 8 0 6-6.475 9.764-11.481 8.022-.315-.07-.379-.124-.78.078-1.455.54-2.413.921-3.525 1.122-.483.087-.916-.25-.588-.581 0 0 .677-.417.842-1.904.064-.351-.14-.879-.454-1.171A8.833 8.833 0 0 1 2 10c0-3.87 3.394-8 9-8zm10.14 9.628c.758.988.86 2.009.86 3.15 0 1.195-.619 3.11-1.368 3.938-.209.23-.354.467-.308.722.12 1.073.614 1.501.614 1.501.237.239-.188.562-.537.5-.803-.146-1.495-.42-2.546-.811-.29-.146-.336-.106-.563-.057-2.043.711-4.398.475-6.083-.927 5.965-.524 8.727-3.03 9.93-8.016z" fill-rule="evenodd"></path></svg></span>发私信</button></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="Profile-main">
+							<div class="Profile-mainColumn">
+								<div class="Card ProfileMain" id="ProfileMain">
+									<div class="ProfileMain-header">
+										<ul role="tablist" class="Tabs ProfileMain-tabs">
+											<li role="tab" class="Tabs-item Tabs-item--noMeta" aria-controls="Profile-activities">
+												<a class="Tabs-link is-active" href="/people/breaknever/activities">动态</a>
+											</li>
+											<li role="tab" class="Tabs-item" aria-controls="Profile-answers">
+												<a class="Tabs-link" href="/people/breaknever/answers">回答<span class="Tabs-meta">127</span></a>
+											</li>
+											<li role="tab" class="Tabs-item" aria-controls="Profile-asks">
+												<a class="Tabs-link" href="/people/breaknever/asks">提问<span class="Tabs-meta">4</span></a>
+											</li>
+											<li role="tab" class="Tabs-item" aria-controls="Profile-posts">
+												<a class="Tabs-link" href="/people/breaknever/posts">文章<span class="Tabs-meta">35</span></a>
+											</li>
+											<li role="tab" class="Tabs-item" aria-controls="Profile-columns">
+												<a class="Tabs-link" href="/people/breaknever/columns">专栏<span class="Tabs-meta">1</span></a>
+											</li>
+											<li role="tab" class="Tabs-item" aria-controls="Profile-pins">
+												<a meta="187" class="Tabs-link" href="/people/breaknever/pins">想法<span class="Tabs-meta">187</span></a>
+											</li>
+											<li role="tab" class="Tabs-item Tabs-item--noMeta">
+												<div class="Popover Tabs-link"><button type="button" id="null-toggle" aria-haspopup="true" aria-expanded="false" aria-owns="null-content" class="Button ProfileMain-menuToggler Button--plain">更多<svg viewBox="0 0 10 6" class="Icon ProfileMain-tabIcon Icon--arrow" style="height:16px;width:10px" width="10" height="16" aria-hidden="true"><title></title><g><path d="M8.716.217L5.002 4 1.285.218C.99-.072.514-.072.22.218c-.294.29-.294.76 0 1.052l4.25 4.512c.292.29.77.29 1.063 0L9.78 1.27c.293-.29.293-.76 0-1.052-.295-.29-.77-.29-1.063 0z"/></g></svg></button></div>
+											</li>
+										</ul>
+									</div>
+									<div class="ListShortcut">
+										<div class="List ProfileActivities" id="Profile-activities" data-zop-feedlistfather="1">
+											<div class="List-header">
+												<h4 class="List-headerText"><span>她<!-- -->的动态</span></h4>
+												<div class="List-headerOptions"></div>
+											</div>
+											<div class="">
+												<div class="List-item">
+													<div class="List-itemMeta">
+														<div class="ActivityItem-meta"><span class="ActivityItem-metaTitle">赞同了回答</span><span>1 天前</span></div>
+													</div>
+													<div class="ContentItem AnswerItem" data-zop="{&quot;authorName&quot;:&quot;匿名用户&quot;,&quot;itemId&quot;:582902404,&quot;title&quot;:&quot;如何评价杜克大学生物统计系劝阻中国学生在学系大楼内讲中文？&quot;,&quot;type&quot;:&quot;answer&quot;}" name="582902404" itemProp="answer" itemType="http://schema.org/Answer" itemscope="">
+														<h2 class="ContentItem-title"><div itemProp="zhihu:question" itemType="http://schema.org/Question" itemscope=""><meta itemProp="url" content="https://www.zhihu.com/question/310353421"/><meta itemProp="name" content="如何评价杜克大学生物统计系劝阻中国学生在学系大楼内讲中文？"/><a target="_blank" data-za-detail-view-element_name="Title" href="/question/310353421/answer/582902404">如何评价杜克大学生物统计系劝阻中国学生在学系大楼内讲中文？</a></div></h2>
+														<div class="ContentItem-meta">
+															<div class="AuthorInfo AnswerItem-authorInfo" itemProp="author" itemscope="" itemType="http://schema.org/Person">
+																<meta itemProp="name" content="匿名用户" />
+																<meta itemProp="image" content="https://pic4.zhimg.com/aadd7b895_s.jpg" />
+																<meta itemProp="url" content="https://www.zhihu.com/people/" />
+																<meta itemProp="zhihu:followerCount" /><span class="UserLink AuthorInfo-avatarWrapper"><img class="Avatar AuthorInfo-avatar" width="38" height="38" src="https://pic4.zhimg.com/aadd7b895_xs.jpg" srcSet="https://pic4.zhimg.com/aadd7b895_l.jpg 2x" alt="匿名用户"/></span>
+																<div class="AuthorInfo-content">
+																	<div class="AuthorInfo-head"><span class="UserLink AuthorInfo-name">匿名用户</span></div>
+																	<div class="AuthorInfo-detail">
+																		<div class="AuthorInfo-badge"></div>
+																	</div>
+																</div>
+															</div>
+															<div class="AnswerItem-extraInfo"><span class="Voters"><button type="button" class="Button Button--plain">600 人<!-- -->赞同了该回答</button></span></div>
+														</div>
+														<meta itemProp="image" content="https://pic2.zhimg.com/50/v2-6854cd2789b8d0b230488360036cb3ae_200x112.jpg" />
+														<meta itemProp="upvoteCount" content="600" />
+														<meta itemProp="url" content="https://www.zhihu.com/question/310353421/answer/582902404" />
+														<meta itemProp="dateCreated" content="2019-01-26T19:42:03.000Z" />
+														<meta itemProp="dateModified" content="2019-01-28T03:57:26.000Z" />
+														<meta itemProp="commentCount" content="74" />
+														<div class="RichContent is-collapsed">
+															<div class="RichContent-cover">
+																<div class="RichContent-cover-inner">
+																	<div class="VagueImage" data-src="https://pic2.zhimg.com/50/v2-6854cd2789b8d0b230488360036cb3ae_400x224.jpg">
+																		<div class="VagueImage-mask is-active"></div>
+																	</div>
+																</div>
+															</div>
+															<div class="RichContent-inner"><span class="RichText ztext CopyrightRichText-richText" itemProp="text">更新：截止至2019年1月27日美东时间4:00PM，请愿书已搜集超过2,059份签名。请愿书起草委员会已接受纽约时报，华盛顿邮报，BBC等一线媒体记者的邮件采访，以下是他们最新的一份公告，由本公众号代为转发。请愿书起草委员会联系方式concerneddukestudents2019@gmail.com最新公告：<a href="http://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/3NjKTVjG-CrC-gD4SVYe_A" class=" external" target="_blank" rel="nofollow noreferrer"><span class="invisible">https://</span><span class="visible">mp.weixin.qq.com/s/3NjK</span><span class="invisible">TVjG-CrC-gD4SVYe_A</span><span class="ellipsis"></span></a>帮扩一份几个朋友连夜一起写的Petition，欢迎扩散转发签名链接：
+																<a href="http://link.zhihu.com/?target=https%3A//docs.google.com/forms/d/e/1FAIpQLScN9qBBtt6l9XbY0c17hVM8UlUMpDpOfTMVT4Q_KL92KyX22g/viewform" class=" external" target="_blank" rel="nofollow noreferrer"><span class="invisible">https://</span><span class="visible">docs.google.com/forms/d</span><span class="invisible">/e/1FAIpQLScN9qBBtt6l9XbY0c17hVM8UlUMpDpOfTMVT4Q_KL92KyX22g/viewform</span><span class="ellipsis"></span></a>（不限学校，非duke的朋友也可以填的）公开…</span><button type="button" class="Button ContentItem-more Button--plain">阅读全文<span style="display:inline-flex;align-items:center">​<svg class="Zi Zi--ArrowDown ContentItem-arrowIcon" fill="currentColor" viewBox="0 0 24 24" width="24" height="24"><path d="M12 13L8.285 9.218a.758.758 0 0 0-1.064 0 .738.738 0 0 0 0 1.052l4.249 4.512a.758.758 0 0 0 1.064 0l4.246-4.512a.738.738 0 0 0 0-1.052.757.757 0 0 0-1.063 0L12.002 13z" fill-rule="evenodd"></path></svg></span></button></div>
+															<div class="ContentItem-actions"><span><button aria-label="赞同" type="button" class="Button VoteButton VoteButton--up"><span style="display:inline-flex;align-items:center">​<svg class="Zi Zi--TriangleUp VoteButton-TriangleUp" fill="currentColor" viewBox="0 0 24 24" width="10" height="10"><path d="M2 18.242c0-.326.088-.532.237-.896l7.98-13.203C10.572 3.57 11.086 3 12 3c.915 0 1.429.571 1.784 1.143l7.98 13.203c.15.364.236.57.236.896 0 1.386-.875 1.9-1.955 1.9H3.955c-1.08 0-1.955-.517-1.955-1.9z" fill-rule="evenodd"></path></svg></span>赞同
+																<!-- -->600</button><button aria-label="反对" type="button" class="Button VoteButton VoteButton--down"><span style="display:inline-flex;align-items:center">​<svg class="Zi Zi--TriangleDown" fill="currentColor" viewBox="0 0 24 24" width="10" height="10"><path d="M20.044 3H3.956C2.876 3 2 3.517 2 4.9c0 .326.087.533.236.896L10.216 19c.355.571.87 1.143 1.784 1.143s1.429-.572 1.784-1.143l7.98-13.204c.149-.363.236-.57.236-.896 0-1.386-.876-1.9-1.956-1.9z" fill-rule="evenodd"></path></svg></span></button></span><button type="button" class="Button ContentItem-action Button--plain Button--withIcon Button--withLabel"><span style="display:inline-flex;align-items:center">​<svg class="Zi Zi--Comment Button-zi" fill="currentColor" viewBox="0 0 24 24" width="1.2em" height="1.2em"><path d="M10.241 19.313a.97.97 0 0 0-.77.2 7.908 7.908 0 0 1-3.772 1.482.409.409 0 0 1-.38-.637 5.825 5.825 0 0 0 1.11-2.237.605.605 0 0 0-.227-.59A7.935 7.935 0 0 1 3 11.25C3 6.7 7.03 3 12 3s9 3.7 9 8.25-4.373 9.108-10.759 8.063z" fill-rule="evenodd"></path></svg></span>74 条评论</button>
+																<div class="Popover ShareMenu ContentItem-action">
+																	<div class="ShareMenu-toggler" id="null-toggle" aria-haspopup="true" aria-expanded="false" aria-owns="null-content"><button type="button" class="Button Button--plain Button--withIcon Button--withLabel"><span style="display:inline-flex;align-items:center">​<svg class="Zi Zi--Share Button-zi" fill="currentColor" viewBox="0 0 24 24" width="1.2em" height="1.2em"><path d="M2.931 7.89c-1.067.24-1.275 1.669-.318 2.207l5.277 2.908 8.168-4.776c.25-.127.477.198.273.39L9.05 14.66l.927 5.953c.18 1.084 1.593 1.376 2.182.456l9.644-15.242c.584-.892-.212-2.029-1.234-1.796L2.93 7.89z" fill-rule="evenodd"></path></svg></span>分享</button></div>
+																</div><button type="button" class="Button ContentItem-action Button--plain Button--withIcon Button--withLabel"><span style="display:inline-flex;align-items:center">​<svg class="Zi Zi--Star Button-zi" fill="currentColor" viewBox="0 0 24 24" width="1.2em" height="1.2em"><path d="M5.515 19.64l.918-5.355-3.89-3.792c-.926-.902-.639-1.784.64-1.97L8.56 7.74l2.404-4.871c.572-1.16 1.5-1.16 2.072 0L15.44 7.74l5.377.782c1.28.186 1.566 1.068.64 1.97l-3.89 3.793.918 5.354c.219 1.274-.532 1.82-1.676 1.218L12 18.33l-4.808 2.528c-1.145.602-1.896.056-1.677-1.218z" fill-rule="evenodd"></path></svg></span>收藏</button><button type="button" class="Button ContentItem-action Button--plain Button--withIcon Button--withLabel"><span style="display:inline-flex;align-items:center">​<svg class="Zi Zi--Heart Button-zi" fill="currentColor" viewBox="0 0 24 24" width="1.2em" height="1.2em"><path d="M2 8.437C2 5.505 4.294 3.094 7.207 3 9.243 3 11.092 4.19 12 6c.823-1.758 2.649-3 4.651-3C19.545 3 22 5.507 22 8.432 22 16.24 13.842 21 12 21 10.158 21 2 16.24 2 8.437z" fill-rule="evenodd"></path></svg></span>感谢</button></div>
+														</div>
+													</div>
+												</div>
+												<div class="List-item">
+													<div class="List-itemMeta">
+														<div class="ActivityItem-meta"><span class="ActivityItem-metaTitle">发布了想法</span><span>3 天前</span></div>
+													</div>
+													<div class="ContentItem PinItem">
+														<div class="ContentItem-meta">
+															<div>
+																<div class="AuthorInfo PinItem-authorInfo" itemProp="author" itemscope="" itemType="http://schema.org/Person">
+																	<meta itemProp="name" content="微调" />
+																	<meta itemProp="image" content="https://pic3.zhimg.com/50/v2-4e988956c93a819e719cee6e33d0b773_s.jpg" />
+																	<meta itemProp="url" content="https://www.zhihu.com/people/breaknever" />
+																	<meta itemProp="zhihu:followerCount" /><span class="UserLink AuthorInfo-avatarWrapper"><div class="Popover"><div id="null-toggle" aria-haspopup="true" aria-expanded="false" aria-owns="null-content"><a class="UserLink-link" data-za-detail-view-element_name="User" target="_blank" href="//www.zhihu.com/people/breaknever"><img class="Avatar AuthorInfo-avatar" width="38" height="38" src="https://pic3.zhimg.com/50/v2-4e988956c93a819e719cee6e33d0b773_xs.jpg" srcSet="https://pic3.zhimg.com/50/v2-4e988956c93a819e719cee6e33d0b773_l.jpg 2x" alt="微调"/></a></div></div></span>
+																	<div class="AuthorInfo-content">
+																		<div class="AuthorInfo-head"><span class="UserLink AuthorInfo-name"><div class="Popover"><div id="null-toggle" aria-haspopup="true" aria-expanded="false" aria-owns="null-content"><a class="UserLink-link" data-za-detail-view-element_name="User" target="_blank" href="//www.zhihu.com/people/breaknever">微调</a></div></div></span></div>
+																		<div class="AuthorInfo-detail">
+																			<div class="AuthorInfo-badge">
+																				<div class="RichText ztext AuthorInfo-badgeText">数据挖掘</div>
+																			</div>
+																		</div>
+																	</div>
+																</div><span class="Voters">132 人为该想法鼓掌</span></div>
+														</div>
+														<div class="RichContent is-collapsed">
+															<div class="RichContent-inner"><span class="RichText ztext CopyrightRichText-richText" itemProp="text">为什么大部分答主的创作激情和产量会在一段时间（1-2年）后下降呢？<br>其实很多人都独立发现过这个规律：说白了就是肚子里的存货倒的差不多了，强行高产就难免就成了人类的本质—复读机。以我为例，现在看到很多提问只需要复制粘贴一下自己以前的答案就可以了，也就丧失了写作的乐趣。<br>除此之外，写作初期很容易受到外部的正面鼓励，比如赞同、关注以及官方的认可。但后期心里阈值也逐渐上升，愈发迟钝起来。毕竟社区会老，答主也会老。<br><a class="hash_tag" href="https://www.zhihu.com/search?q=%23%E6%89%80%E4%BB%A5%E8%BF%99%E5%B0%B1%E6%98%AF%E4%BD%A0%E4%B8%80%E7%9B%B4%E6%91%B8%E9%B1%BC%E7%9A%84%E5%8E%9F%E5%9B%A0%E5%90%97%23">#所以这就是你一直摸鱼的原因吗#</a></span><button type="button" class="Button ContentItem-more Button--plain">阅读全文<span style="display:inline-flex;align-items:center">​<svg class="Zi Zi--ArrowDown ContentItem-arrowIcon" fill="currentColor" viewBox="0 0 24 24" width="24" height="24"><path d="M12 13L8.285 9.218a.758.758 0 0 0-1.064 0 .738.738 0 0 0 0 1.052l4.249 4.512a.758.758 0 0 0 1.064 0l4.246-4.512a.738.738 0 0 0 0-1.052.757.757 0 0 0-1.063 0L12.002 13z" fill-rule="evenodd"></path></svg></span></button></div>
+															<div>
+																<div class="RichText ztext PinItem-remainContentRichText"></div>
+																<div class="ContentItem-time">
+																	<a target="_blank" href="//www.zhihu.com/pin/1072066933461094400"><span data-tooltip="发布于 2019-01-25 09:44">发布于 2019-01-25</span></a>
+																</div>
+															</div>
+															<div class="ContentItem-actions"><button type="button" class="Button ReactionButton ContentItem-action"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="Icon Icon--clap" style="height:20px;width:20px" aria-hidden="true"><title></title><g><path fill-rule="evenodd" d="M17.92 6.7c-.04.04-.08.06-.13.05-.1 0-.2-.1-.2-.18l.2-2.9v-.05c0-.08.1-.1.2-.07l2 1.05v.22L17.9 6.7zm2.9-.24l.12 1.47v.04c-.02.1-.1.15-.2.13l-2.17-.4c-.05-.02-.1-.05-.12-.1-.04-.07 0-.18.08-.22l2.04-1.06h.06c.1-.02.17.04.18.14zm-4.4-.02l-1.75-1.78-.03-.06c-.04-.08 0-.18.1-.2l1.54-.62h.05c.1-.02.17.05.18.14l.2 2.4v.12c0 .06-.1.06-.2 0zm1.76 2.28l1.57 4.3c.72 1.97.05 4.2-1.65 5.46l-.26.2c-.97.7-2.1 1.06-3.25 1.06-.4 0-.8-.05-1.1-.12-.6.2-1.1.3-1.7.3-1.1 0-2.3-.37-3.2-1.14L8 18.2c-.5-.4-1.65-1.52-3.52-3.43-.6-.6-.7-1.57-.24-2.3l.14-.17c-.66-.6-.75-1.65-.2-2.36.14-.15.26-.26.4-.35-.16-.6-.06-1.2.3-1.6l.07-.1c.3-.4.7-.6 1.15-.6.34-.1.67.1.96.2l.1-.2.1-.1c.48-.6 1.18-.8 1.83-.6l.1-.1c.7-.8 1.9-.9 2.7-.2l.4.4.1-.2c.2-.3.5-.5.8-.6.4-.2.9-.2 1.4 0 .4.2.7.6.9 1.02l.1.3c.5-.17 1-.14 1.5.1s.8.62 1 1.1zm-1.13 8.86l.25-.2c1.22-.88 1.7-2.5 1.18-3.9l-1.57-4.3c-.1-.32-.4-.5-.8-.37l-.1.1-.1.1c-.3.2-.5.6-.3 1l.3.7c.1.2 0 .5-.2.6-.1.1-.3 0-.4-.1L11 7.5c-.24-.2-.6-.2-.8.04-.2.28-.18.6.03.8l2.74 2.5c.15.16.16.38.03.5s-.35.17-.5 0L9.8 8.9c-.03 0-.04-.02-.05-.04l-.73-.64c-.2-.2-.54-.18-.73.03-.3.3-.2.7 0 .95l3.3 3.1c.1.13.1.35 0 .5-.2.14-.4.15-.5.02l-2.9-2.7c-.2-.2-.5-.2-.7 0-.2.25-.2.6 0 .83l3 2.76c.1.1.1.3 0 .5-.2.1-.4.1-.5 0l-1.9-1.7c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3.1-.2.3-.2.7.03.9 1.9 2 3.1 3.2 3.54 3.5.2.2.56.4 1.04.7 1.44.9 3.27.9 4.66-.1zM5.3 14c1.8 1.85 2.95 2.97 3.4 3.34l.74.6c.6.5 1.33.78 2.06.85l-1-.7c-.5-.4-1.68-1.6-3.68-3.7-.3-.3-.5-.7-.55-1.1l-.44-.3c-.08-.1-.17-.1-.28-.1h-.03c-.1 0-.22 0-.3.1-.2.3-.18.7.07.9zm.16-3.6c-.14.02-.27.1-.36.2-.23.28-.2.67.05.9l1.16 1.04.3-.6c0-.02.1-.04.1-.05-.3-.4-.4-.8-.5-1.2l-.2-.3c-.1-.1-.2-.2-.4-.2zm.72-1.97c-.15 0-.28.08-.38.2-.26.33-.22.75.06 1l.34.32c.07-.2.17-.4.3-.6.02 0 .08-.07.08-.07.08-.1.16-.16.24-.23l-.03-.3-.2-.17c-.2-.1-.3-.15-.5-.15zm7.1-1.03l-.13.16 1.2 1.05c.1-.1.2-.3.35-.4l-.2-.5c-.06-.1-.2-.3-.36-.4-.18-.1-.37-.1-.55 0-.2.1-.3.2-.3.3z"/></g></svg>132</button><button type="button" class="Button ContentItem-action Button--plain Button--withIcon Button--withLabel"><span style="display:inline-flex;align-items:center">​<svg class="Zi Zi--Comment Button-zi" fill="currentColor" viewBox="0 0 24 24" width="1.2em" height="1.2em"><path d="M10.241 19.313a.97.97 0 0 0-.77.2 7.908 7.908 0 0 1-3.772 1.482.409.409 0 0 1-.38-.637 5.825 5.825 0 0 0 1.11-2.237.605.605 0 0 0-.227-.59A7.935 7.935 0 0 1 3 11.25C3 6.7 7.03 3 12 3s9 3.7 9 8.25-4.373 9.108-10.759 8.063z" fill-rule="evenodd"></path></svg></span>56 条评论</button>
+																<div class="Popover ShareMenu ContentItem-action">
+																	<div class="ShareMenu-toggler" id="null-toggle" aria-haspopup="true" aria-expanded="false" aria-owns="null-content"><button type="button" class="Button Button--plain Button--withIcon Button--withLabel"><span style="display:inline-flex;align-items:center">​<svg class="Zi Zi--Share Button-zi" fill="currentColor" viewBox="0 0 24 24" width="1.2em" height="1.2em"><path d="M2.931 7.89c-1.067.24-1.275 1.669-.318 2.207l5.277 2.908 8.168-4.776c.25-.127.477.198.273.39L9.05 14.66l.927 5.953c.18 1.084 1.593 1.376 2.182.456l9.644-15.242c.584-.892-.212-2.029-1.234-1.796L2.93 7.89z" fill-rule="evenodd"></path></svg></span>分享</button></div>
+																</div><button type="button" class="Button ContentItem-action Button--plain Button--withIcon Button--withLabel"><span style="display:inline-flex;align-items:center">​<svg class="Zi Zi--Star Button-zi" fill="currentColor" viewBox="0 0 24 24" width="1.2em" height="1.2em"><path d="M5.515 19.64l.918-5.355-3.89-3.792c-.926-.902-.639-1.784.64-1.97L8.56 7.74l2.404-4.871c.572-1.16 1.5-1.16 2.072 0L15.44 7.74l5.377.782c1.28.186 1.566 1.068.64 1.97l-3.89 3.793.918 5.354c.219 1.274-.532 1.82-1.676 1.218L12 18.33l-4.808 2.528c-1.145.602-1.896.056-1.677-1.218z" fill-rule="evenodd"></path></svg></span>收藏</button><button type="button" class="Button ContentItem-action Button--plain"><svg viewBox="0 0 18 20" class="Icon Icon--report Icon--left" style="height:16px;width:11px" width="11" height="16" aria-hidden="true"><title></title><g><path d="M16.947 1.13c-.633.135-3.927.638-5.697.384-3.133-.45-4.776-2.54-9.95-.888C.305 1.04.025 1.664.025 2.646L0 18.807c0 .3.1.54.304.718.195.202.438.304.73.304.275 0 .52-.102.73-.304.202-.18.304-.418.304-.718v-6.58c4.533-1.235 8.047.668 8.562.864 2.343.893 5.542.008 6.774-.657.397-.178.596-.474.596-.887V1.964c0-.6-.42-.972-1.053-.835z"/></g></svg>举报</button></div>
+														</div>
+													</div>
+												</div>
+												<div></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="Profile-sideColumn" data-za-module="RightSideBar">
+								<div class="Card">
+									<div class="Card-header Profile-sideColumnTitle">
+										<div class="Card-headerText">个人成就</div>
+									</div>
+									<div class="Profile-sideColumnItems">
+										<div class="Profile-sideColumnItem">
+											<div class="IconGraf">
+												<div class="IconGraf-iconWrapper">
+													<svg viewBox="0 0 20 20" class="Icon IconGraf-icon Icon--badgeGlorious" style="height:16px;width:16px" width="16" height="16" aria-hidden="true">
+														<title></title>
+														<g>
+															<g fill="none" fill-rule="evenodd">
+																<path d="M.64 11.39c1.068.895 1.808 2.733 1.66 4.113l.022-.196c-.147 1.384.856 2.4 2.24 2.278l-.198.016c1.387-.12 3.21.656 4.083 1.735l-.125-.154c.876 1.085 2.304 1.093 3.195.028l-.127.152c.895-1.068 2.733-1.808 4.113-1.66l-.198-.022c1.386.147 2.402-.856 2.28-2.238l.016.197c-.12-1.388.656-3.212 1.735-4.084l-.154.125c1.084-.876 1.093-2.304.028-3.195l.152.127c-1.068-.895-1.808-2.732-1.66-4.113l-.022.198c.147-1.386-.856-2.4-2.24-2.28l.198-.016c-1.387.122-3.21-.655-4.083-1.734l.125.153C10.802-.265 9.374-.274 8.483.79L8.61.64c-.895 1.068-2.733 1.808-4.113 1.662l.198.02c-1.386-.147-2.4.857-2.28 2.24L2.4 4.363c.12 1.387-.656 3.21-1.735 4.084l.154-.126C-.265 9.2-.274 10.626.79 11.517L.64 11.39z" fill="#FF9500" />
+																<path d="M10.034 12.96L7.38 14.58c-.47.286-.747.09-.618-.45l.72-3.024-2.36-2.024c-.418-.357-.318-.68.235-.725l3.1-.25 1.195-2.87c.21-.508.55-.513.763 0l1.195 2.87 3.1.25c.547.043.657.365.236.725l-2.362 2.024.72 3.025c.13.535-.143.74-.616.45l-2.654-1.62z" fill="#FFF" /> </g>
+														</g>
+													</svg>
+												</div>优秀回答者</div>
+											<div class="Profile-sideColumnItemValue"><span><span><a href="/people/breaknever/creations/19559450">机器学习</a>、</span><span><a href="/people/breaknever/creations/19553534">数据挖掘</a>、</span><span><a href="/people/breaknever/creations/19551275">人工智能</a> </span><button type="button" class="Button Button--plain">等 4 个</button>话题</span>
+											</div>
+										</div>
+										<div class="Profile-sideColumnItem">
+											<div class="IconGraf">
+												<div class="IconGraf-iconWrapper">
+													<svg viewBox="0 0 14 16" class="Icon IconGraf-icon Icon--marked" style="height:14px;width:16px" width="16" height="14" aria-hidden="true">
+														<title></title>
+														<g>
+															<path d="M0 1.505C0 .675.666 0 1.5 0H3v6l.59-.59c.778-.778 2.043-.777 2.82 0L7 6V0h5.498C13.328 0 14 .667 14 1.505v12.99c0 .83-.675 1.505-1.498 1.505H1.498C.67 16 0 15.333 0 14.495V1.505z" fill-rule="evenodd" />
+														</g>
+													</svg>
+												</div>
+												<div class="Profile-sideColumnItemIncludedText"><span>知乎收录</span>
+													<div class="Profile-sideColumnItemIncludedInfo">
+														<a class="Profile-sideColumnItemLink" href="/people/breaknever/answers/included"> 21 个回答</a>
+														<a class="Profile-sideColumnItemLink" href="/people/breaknever/posts/included"> 3 篇文章</a>
+													</div>
+												</div>
+											</div>
+											<div class="Profile-sideColumnItemValue">编辑推荐、知乎圆桌、知乎周刊和知乎日报收录</div>
+										</div>
+										<div class="Profile-sideColumnItem">
+											<div class="IconGraf">
+												<div class="IconGraf-iconWrapper">
+													<svg viewBox="0 0 20 18" xmlns="http://www.w3.org/2000/svg" class="Icon IconGraf-icon Icon--like" style="height:16px;width:16px" width="16" height="16" aria-hidden="true">
+														<title></title>
+														<g>
+															<path d="M.718 7.024c-.718 0-.718.63-.718.63l.996 9.693c0 .703.718.65.718.65h1.45c.916 0 .847-.65.847-.65V7.793c-.09-.88-.853-.79-.846-.79l-2.446.02zm11.727-.05S13.2 5.396 13.6 2.89C13.765.03 11.55-.6 10.565.53c-1.014 1.232 0 2.056-4.45 5.83C5.336 6.965 5 8.01 5 8.997v6.998c-.016 1.104.49 2 1.99 2h7.586c2.097 0 2.86-1.416 2.86-1.416s2.178-5.402 2.346-5.91c1.047-3.516-1.95-3.704-1.95-3.704l-5.387.007z" />
+														</g>
+													</svg>
+												</div>获得
+												<!-- -->48,507
+												<!-- -->次赞同</div>
+											<div class="Profile-sideColumnItemValue">获得 6,891 次感谢 ， 70,884 次收藏</div>
+										</div>
+										<div class="Profile-sideColumnItem">
+											<div class="IconGraf">
+												<div class="IconGraf-iconWrapper">
+													<svg width="16" height="16" viewBox="0 0 16 16" class="Icon IconGraf-icon Icon--commonEdit" style="height:16px;width:16px" aria-hidden="true">
+														<title></title>
+														<g>
+															<path d="M8 15.5C3.858 15.5.5 12.142.5 8 .5 3.858 3.858.5 8 .5c4.142 0 7.5 3.358 7.5 7.5 0 4.142-3.358 7.5-7.5 7.5zm3.032-11.643c-.22-.214-.574-.208-.79.013L5.1 9.173 6.778 10.8l5.142-5.303c.215-.222.21-.575-.01-.79l-.878-.85zm-6.77 7.107L4 12l1.028-.293.955-.27L4.503 10l-.242.964z" fill-rule="evenodd" />
+														</g>
+													</svg>
+												</div>
+												<a class="Profile-sideColumnItemLink" href="/people/breaknever/logs" target="_blank">参与
+													<!-- -->470
+													<!-- -->次公共编辑</a>
+											</div>
+											<div class="Profile-sideColumnItemValue"></div>
+										</div>
+									</div>
+								</div>
+								<div class="Card FollowshipCard">
+									<div class="NumberBoard FollowshipCard-counts NumberBoard--divider">
+										<a type="button" class="Button NumberBoard-item Button--plain" href="/people/breaknever/following">
+											<div class="NumberBoard-itemInner">
+												<div class="NumberBoard-itemName">关注了</div><strong class="NumberBoard-itemValue" title="383">383</strong></div>
+										</a>
+										<a type="button" class="Button NumberBoard-item Button--plain" href="/people/breaknever/followers">
+											<div class="NumberBoard-itemInner">
+												<div class="NumberBoard-itemName">关注者</div><strong class="NumberBoard-itemValue" title="45658">45,658</strong></div>
+										</a>
+									</div>
+								</div>
+								<div class="Profile-lightList">
+									<a class="Profile-lightItem" href="/people/breaknever/following/topics"><span class="Profile-lightItemName">关注的话题</span><span class="Profile-lightItemValue">28</span></a>
+									<a class="Profile-lightItem" href="/people/breaknever/following/columns"><span class="Profile-lightItemName">关注的专栏</span><span class="Profile-lightItemValue">20</span></a>
+									<a class="Profile-lightItem" href="/people/breaknever/following/questions"><span class="Profile-lightItemName">关注的问题</span><span class="Profile-lightItemValue">294</span></a>
+									<a class="Profile-lightItem" href="/people/breaknever/following/collections"><span class="Profile-lightItemName">关注的收藏夹</span><span class="Profile-lightItemValue">0</span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</main>
+			</div>
+		</div>
+		<script id="js-clientConfig" type="text/json">
+			{
+				"host": "zhihu.com",
+				"protocol": "https:",
+				"wwwHost": "www.zhihu.com",
+				"zhuanlanHost": "zhuanlan.zhihu.com"
+			}
+		</script>
+		<script id="js-initialData" type="text/json">
+			{
+				"initialState": {
+					"common": {
+						"ask": {}
+					},
+					"loading": {
+						"global": {
+							"count": 0
+						},
+						"local": {
+							"people\u002Fget\u002F": false,
+							"switches\u002FgetVipSwitches\u002F": false,
+							"people\u002FgetActivities\u002Fbreaknever": false
+						}
+					},
+					"entities": {
+						"users": {
+							"breaknever": {
+								"isFollowed": false,
+								"educations": [],
+								"followingCount": 383,
+								"voteFromCount": 0,
+								"userType": "people",
+								"includedText": "编辑推荐、知乎圆桌、知乎周刊和知乎日报",
+								"pinsCount": 187,
+								"isFollowing": false,
+								"isPrivacyProtected": false,
+								"accountStatus": [],
+								"includedArticlesCount": 3,
+								"isForceRenamed": false,
+								"id": "e3f5794fa10022aa07c05b0b9e6dc537",
+								"favoriteCount": 1,
+								"voteupCount": 48507,
+								"commercialQuestionCount": 0,
+								"isBlocking": false,
+								"followingColumnsCount": 20,
+								"headline": "数据挖掘",
+								"urlToken": "breaknever",
+								"participatedLiveCount": 0,
+								"isAdvertiser": false,
+								"followingFavlistsCount": 0,
+								"favoritedCount": 70884,
+								"isOrg": false,
+								"followerCount": 45658,
+								"employments": [],
+								"type": "people",
+								"avatarHue": "",
+								"avatarUrlTemplate": "https:\u002F\u002Fpic4.zhimg.com\u002Fv2-4e988956c93a819e719cee6e33d0b773_{size}.jpg",
+								"followingTopicCount": 28,
+								"description": "1. 机器学习入门教程：\u003Ca href=\"https:\u002F\u002Fzhuanlan.zhihu.com\u002Fp\u002F29704017\" class=\"internal\"\u003E\u003Cspan class=\"invisible\"\u003Ehttps:\u002F\u002F\u003C\u002Fspan\u003E\u003Cspan class=\"visible\"\u003Ezhuanlan.zhihu.com\u002Fp\u002F29\u003C\u002Fspan\u003E\u003Cspan class=\"invisible\"\u003E704017\u003C\u002Fspan\u003E\u003Cspan class=\"ellipsis\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E\u003Cbr\u003E2. Python异常检测工具库：\u003Ca href=\"https:\u002F\u002Flink.zhihu.com\u002F?target=https%3A\u002F\u002Fgithub.com\u002Fyzhao062\u002Fpyod\" class=\" external\" target=\"_blank\" rel=\"nofollow noreferrer\"\u003E\u003Cspan class=\"invisible\"\u003Ehttps:\u002F\u002F\u003C\u002Fspan\u003E\u003Cspan class=\"visible\"\u003Egithub.com\u002Fyzhao062\u002Fpyo\u003C\u002Fspan\u003E\u003Cspan class=\"invisible\"\u003Ed\u003C\u002Fspan\u003E\u003Cspan class=\"ellipsis\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E\u003Cbr\u003E3. 对我的回答、文章要带着批判的眼光去看，保持独立思考。请关注内容，而非人设。可以把我当做一位民科，避免无意义争论。\u003Cbr\u003E4. 我已委托“维权骑士”(\u003Ca href=\"https:\u002F\u002Flink.zhihu.com\u002F?target=http%3A\u002F\u002Frightknights.com\" class=\" external\" target=\"_blank\" rel=\"nofollow noreferrer\"\u003E\u003Cspan class=\"invisible\"\u003Ehttp:\u002F\u002F\u003C\u002Fspan\u003E\u003Cspan class=\"visible\"\u003Erightknights.com\u003C\u002Fspan\u003E\u003Cspan class=\"invisible\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E)为我的文章进行维权活动。版权对于原创者非常重要，请在获得（完全免费）许可后再转载。",
+								"business": {
+									"url": "http:\u002F\u002Fwww.zhihu.com\u002Ftopics\u002F",
+									"avatarUrl": "https:\u002F\u002Fpic1.zhimg.com\u002Fe82bab09c_is.jpg",
+									"name": "咨询分析",
+									"introduction": "",
+									"type": "topic",
+									"excerpt": "",
+									"id": ""
+								},
+								"avatarUrl": "https:\u002F\u002Fpic4.zhimg.com\u002Fv2-4e988956c93a819e719cee6e33d0b773_is.jpg",
+								"columnsCount": 1,
+								"hostedLiveCount": 0,
+								"isActive": 1,
+								"thankToCount": 0,
+								"mutualFolloweesCount": 0,
+								"coverUrl": "https:\u002F\u002Fpic4.zhimg.com\u002Fv2-315ee030f89c96060aad5842c97f249f_r.jpg",
+								"thankFromCount": 0,
+								"voteToCount": 0,
+								"isBlocked": false,
+								"answerCount": 127,
+								"allowMessage": false,
+								"articlesCount": 35,
+								"name": "微调",
+								"questionCount": 4,
+								"locations": [{
+									"url": "http:\u002F\u002Fwww.zhihu.com\u002Ftopics\u002F19552360",
+									"avatarUrl": "https:\u002F\u002Fpic4.zhimg.com\u002Fdc6173dff_is.jpg",
+									"name": "英国",
+									"introduction": "大不列颠及北爱尔兰联合王国（United Kingdom of Great Britain and Northern Ireland），简称“英国”（United Kingdom），本土位于欧洲大陆西北面的不列颠群岛，被北海、英吉利海峡、凯尔特海、爱尔兰海和大西洋包围。英国是由大不列颠岛上的英格兰、威尔士和苏格兰以及爱尔兰岛东北部的北爱尔兰以及一系列附属岛屿共同组成的一个西欧岛国。除本土之外，其还拥有十四个海外领地，总人口超过6500万，其中以英格兰人（盎格鲁-撒克逊人）为主体民族，占全国总人口的占83.9%。1688年的光荣革命确立了君主立宪政体，18世纪60年代至19世纪30年代成为世界上第一个完成工业革命的国家，国力迅速壮大。18世纪至20世纪初期英国统治的领土跨越全球七大洲，是当时世界上最强大的国家和第一大殖民帝国，其殖民地面积等于本土的111倍， 号称日不落帝国。在两次世界大战中都取得了胜利，但国力严重受损。到20世纪下半叶大英帝国解体，资本主义世界霸权的地位被美国取代。不过，现在英国仍是一个在世界范围内有巨大影响力的大国。英国是一个高度发达的资本主义国家，欧洲四大经济体之一，其国民拥有较高的生活水平和良好的社会保障制度。作为英联邦元首国、八国集团成员国、北约创始会员国、英国同时也是联合国安全理事会五大常任理事国之一。北京时间2018年3月19日，欧盟与英国就2019年3月英国脱离欧盟后为期两年的过渡期条款达成广泛协议。",
+									"type": "topic",
+									"excerpt": "大不列颠及北爱尔兰联合王国（United Kingdom of Great Britain and Northern Ireland），简称“英国”（United Kingdom），本土位于欧洲大陆西北面的不列颠群岛，被北海、英吉利海峡、凯尔特海、爱尔兰海和大西洋包围。英国是由大不列颠岛上的英格兰、威尔士和苏格兰以及爱尔兰岛东北部的北爱尔兰以及一系列附属岛屿共同组成的一个西欧岛国。除本土之外，其还拥有十四个海外领地，总人口超过6500万，其中以英格兰人（盎格鲁-撒…",
+									"id": "19552360"
+								}, {
+									"url": "http:\u002F\u002Fwww.zhihu.com\u002Ftopics\u002F19550828",
+									"avatarUrl": "https:\u002F\u002Fpic1.zhimg.com\u002Fv2-96213b5944602973f1f573c3b8176ad0_is.jpg",
+									"name": "北京",
+									"introduction": "北京，简称“京”，是中华人民共和国的首都、直辖市、国家中心城市、超大城市、国际大都市，全国政治中心、文化中心、国际交往中心、科技创新中心，是中国共产党中央委员会、中华人民共和国中央人民政府、全国人民代表大会、中国人民政治协商会议全国委员会、中华人民共和国中央军事委员会所在地，也是中部战区司令部驻地。北京位于华北平原北部，背靠燕山，毗邻天津市和河北省。北京的气候为典型的北温带半湿润大陆性季风气候。北京是首批国家历史文化名城和世界上拥有世界文化遗产数最多的城市，三千多年的历史孕育了故宫、天坛、八达岭长城、颐和园等众多名胜古迹。早在七十万年前，北京周口店地区就出现了原始人群部落“北京人”。公元前1045年，北京成为蓟、燕等诸侯国的都城。公元938年以来，北京先后成为辽陪都、金中都、元大都、明、清国都。1949年10月1日成为中华人民共和国首都。北京被全球权威机构GaWC评为世界一线城市。联合国报告指出，北京人类发展指数居中国城市第二位。2017年，北京人均可支配收入达到57230元，社会消费品零售总额11575.4亿元。北京住户存款总额和人均住户存款均居全国第一。2017年，北京高新技术企业达到20183家。福布斯2017年“中国大陆最佳商业城市排行榜”排第3位。2015年7月31日，国际奥委会主席巴赫宣布北京携手张家口获得2022年冬季奥林匹克运动会的举办权。北京由此成为全球首个既举办过夏季奥运会又将举办冬季奥运会的城市。",
+									"type": "topic",
+									"excerpt": "北京，简称“京”，是中华人民共和国的首都、直辖市、国家中心城市、超大城市、国际大都市，全国政治中心、文化中心、国际交往中心、科技创新中心，是中国共产党中央委员会、中华人民共和国中央人民政府、全国人民代表大会、中国人民政治协商会议全国委员会、中华人民共和国中央军事委员会所在地，也是中部战区司令部驻地。北京位于华北平原北部，背靠燕山，毗邻天津市和河北省。北京的气候为典型的北温带半湿润大陆性季风气候。…",
+									"id": "19550828"
+								}, {
+									"url": "http:\u002F\u002Fwww.zhihu.com\u002Ftopics\u002F19564038",
+									"avatarUrl": "https:\u002F\u002Fpic1.zhimg.com\u002F3ba0c8988_is.jpg",
+									"name": "山东",
+									"introduction": "山东，因居太行山以东而得名，简称“鲁”，省会济南。先秦时期隶属齐国、鲁国，故而别名齐鲁。山东地处华东沿海、黄河下游、京杭大运河中北段，是华东地区的最北端省份。西部为黄淮海平原，连接中原，西北与河北省接壤，西南与河南省毗邻，南及东南分别与安徽、江苏两省相望；中部为鲁中山区，地势高突，泰山是全境最高点；东部为山东半岛，伸入黄海、渤海，北隔渤海海峡与辽东半岛相对、拱卫京畿，东隔黄海与朝鲜半岛相望，东南均临黄海、遥望东海及日本南部列岛。山东是儒家文化发源地，儒家思想的创立人有曲阜的孔子、邹城的孟子，以及墨家思想的创始人滕州的墨子、军事家孙子等，均出生于今山东。姜太公在临淄建立齐国，成就了齐桓公、管仲、晏婴、鲍叔牙、孙武、孙膑、邹衍等一大批名人志士；齐国还创建了世界上第一所官方举办、私家主持的高等学府——稷下学宫。山东省是中国的经济第三大省、人口第二大省、中国温带水果之乡，国内生产总值稳居全国第三名，占中国GDP总量的1\u002F11。2013年，山东与广东、江苏，一起被评为中国最具综合竞争力省区。山东是第十届中国艺术节，中华人民共和国第十一届运动会，第三届亚洲沙滩运动会，2014年世界杯帆船赛、世界园艺博览会、APEC贸易部长会议，2015年世界休闲体育大会、国际历史科学大会举办地。2017年全省实现生产总值72678.18亿元，山东人均GDP达到72851元。",
+									"type": "topic",
+									"excerpt": "山东，因居太行山以东而得名，简称“鲁”，省会济南。先秦时期隶属齐国、鲁国，故而别名齐鲁。山东地处华东沿海、黄河下游、京杭大运河中北段，是华东地区的最北端省份。西部为黄淮海平原，连接中原，西北与河北省接壤，西南与河南省毗邻，南及东南分别与安徽、江苏两省相望；中部为鲁中山区，地势高突，泰山是全境最高点；东部为山东半岛，伸入黄海、渤海，北隔渤海海峡与辽东半岛相对、拱卫京畿，东隔黄海与朝鲜半岛相望，东南…",
+									"id": "19564038"
+								}],
+								"badge": [{
+									"topics": [{
+										"url": "http:\u002F\u002Fwww.zhihu.com\u002Ftopics\u002F19559450",
+										"avatarUrl": "https:\u002F\u002Fpic1.zhimg.com\u002Fd3dd87a0feae0a3db82973157eee89c0_is.png",
+										"name": "机器学习",
+										"introduction": "机器学习(Machine Learning, ML)是一门多领域交叉学科，涉及概率论、统计学、逼近论、凸分析、算法复杂度理论等多门学科。专门研究计算机怎样模拟或实现人类的学习行为，以获取新的知识或技能，重新组织已有的知识结构使之不断改善自身的性能。它是人工智能的核心，是使计算机具有智能的根本途径，其应用遍及人工智能的各个领域，它主要使用归纳、综合而不是演绎。",
+										"type": "topic",
+										"excerpt": "机器学习(Machine Learning, ML)是一门多领域交叉学科，涉及概率论、统计学、逼近论、凸分析、算法复杂度理论等多门学科。专门研究计算机怎样模拟或实现人类的学习行为，以获取新的知识或技能，重新组织已有的知识结构使之不断改善自身的性能。它是人工智能的核心，是使计算机具有智能的根本途径，其应用遍及人工智能的各个领域，它主要使用归纳、综合而不是演绎。",
+										"id": "19559450"
+									}, {
+										"url": "http:\u002F\u002Fwww.zhihu.com\u002Ftopics\u002F19553534",
+										"avatarUrl": "https:\u002F\u002Fpic1.zhimg.com\u002F3d11abd48_is.jpg",
+										"name": "数据挖掘",
+										"introduction": "数据挖掘（英语：Data mining），又译为资料探勘、数据采矿。它是数据库知识发现（英语：Knowledge-Discovery in Databases，简称：KDD)中的一个步骤。数据挖掘一般是指从大量的数据中通过算法搜索隐藏于其中信息的过程。数据挖掘通常与计算机科学有关，并通过统计、在线分析处理、情报检索、机器学习、专家系统（依靠过去的经验法则）和模式识别等诸多方法来实现上述目标。",
+										"type": "topic",
+										"excerpt": "数据挖掘（英语：Data mining），又译为资料探勘、数据采矿。它是数据库知识发现（英语：Knowledge-Discovery in Databases，简称：KDD)中的一个步骤。数据挖掘一般是指从大量的数据中通过算法搜索隐藏于其中信息的过程。数据挖掘通常与计算机科学有关，并通过统计、在线分析处理、情报检索、机器学习、专家系统（依靠过去的经验法则）和模式识别等诸多方法来实现上述目标。",
+										"id": "19553534"
+									}, {
+										"url": "http:\u002F\u002Fwww.zhihu.com\u002Ftopics\u002F19551275",
+										"avatarUrl": "https:\u002F\u002Fpic1.zhimg.com\u002F13e388fe4_is.jpg",
+										"name": "人工智能",
+										"introduction": "人工智能（Artificial Intelligence），英文缩写为AI。它是研究、开发用于模拟、延伸和扩展人的智能的理论、方法、技术及应用系统的一门新的技术科学。人工智能是计算机科学的一个分支，它企图了解智能的实质，并生产出一种新的能以人类智能相似的方式做出反应的智能机器，该领域的研究包括机器人、语言识别、图像识别、自然语言处理和专家系统等。人工智能从诞生以来，理论和技术日益成熟，应用领域也不断扩大，可以设想，未来人工智能带来的科技产品，将会是人类智慧的“容器”。人工智能可以对人的意识、思维的信息过程的模拟。人工智能不是人的智能，但能像人那样思考、也可能超过人的智能。人工智能是一门极富挑战性的科学，从事这项工作的人必须懂得计算机知识，心理学和哲学。人工智能是包括十分广泛的科学，它由不同的领域组成，如机器学习，计算机视觉等等，总的说来，人工智能研究的一个主要目标是使机器能够胜任一些通常需要人类智能才能完成的复杂工作。但不同的时代、不同的人对这种“复杂工作”的理解是不同的。2017年12月，人工智能入选“2017年度中国媒体十大流行语”。",
+										"type": "topic",
+										"excerpt": "人工智能（Artificial Intelligence），英文缩写为AI。它是研究、开发用于模拟、延伸和扩展人的智能的理论、方法、技术及应用系统的一门新的技术科学。人工智能是计算机科学的一个分支，它企图了解智能的实质，并生产出一种新的能以人类智能相似的方式做出反应的智能机器，该领域的研究包括机器人、语言识别、图像识别、自然语言处理和专家系统等。人工智能从诞生以来，理论和技术日益成熟，应用领域也不断扩大，可以设想，未来…",
+										"id": "19551275"
+									}, {
+										"url": "http:\u002F\u002Fwww.zhihu.com\u002Ftopics\u002F19558740",
+										"avatarUrl": "https:\u002F\u002Fpic4.zhimg.com\u002Fv2-59f27a9b467b09e7dbf04c3837937133_is.jpg",
+										"name": "统计学",
+										"introduction": "统计学是关于认识客观现象总体数量特征和数量关系的科学。它是通过搜集、整理、分析统计资料，认识客观现象数量规律性的方法论科学。由于统计学的定量研究具有客观、准确和可检验的特点，所以统计方法就成为实证研究的最重要的方法，广泛适用于自然、社会、经济、科学技术各个领域的分析研究。",
+										"type": "topic",
+										"excerpt": "统计学是关于认识客观现象总体数量特征和数量关系的科学。它是通过搜集、整理、分析统计资料，认识客观现象数量规律性的方法论科学。由于统计学的定量研究具有客观、准确和可检验的特点，所以统计方法就成为实证研究的最重要的方法，广泛适用于自然、社会、经济、科学技术各个领域的分析研究。",
+										"id": "19558740"
+									}],
+									"type": "best_answerer",
+									"description": "优秀回答者"
+								}],
+								"includedAnswersCount": 21,
+								"vipInfo": {
+									"isVip": true,
+									"vipIcon": {
+										"nightModeUrl": "https:\u002F\u002Fpic1.zhimg.com\u002F50\u002Fv2-9d59e5fce176ed45e29b5ae2d8c448d2_r.png",
+										"url": "https:\u002F\u002Fpic2.zhimg.com\u002F50\u002Fv2-68cefc7c2cb18645322a6377219841bf_r.png"
+									}
+								},
+								"url": "http:\u002F\u002Fwww.zhihu.com\u002Fpeople\u002Fe3f5794fa10022aa07c05b0b9e6dc537",
+								"messageThreadToken": "5985004800",
+								"logsCount": 470,
+								"followingQuestionCount": 294,
+								"thankedCount": 6891,
+								"gender": 0
+							}
+						},
+						"questions": {
+							"302707950": {
+								"author": {
+									"isFollowed": false,
+									"type": "people",
+									"name": "王昊翔",
+									"headline": "深度遗忘的人工智障",
+									"urlToken": "haoxiang_wang",
+									"userType": "people",
+									"vipInfo": null,
+									"url": "https:\u002F\u002Fapi.zhihu.com\u002Fpeople\u002Fd9d5b7e528077a996f45c5c6bf9eba2f",
+									"avatarUrl": "https:\u002F\u002Fpic1.zhimg.com\u002F50\u002Fv2-38c617753964591574c105c912c50088_s.jpg",
+									"isFollowing": false,
+									"isOrg": false,
+									"gender": 1,
+									"badge": [],
+									"id": "d9d5b7e528077a996f45c5c6bf9eba2f"
+								},
+								"relationship": {
+									"isAuthor": false,
+									"isFollowing": false
+								},
+								"created": 1542431952,
+								"url": "https:\u002F\u002Fapi.zhihu.com\u002Fquestions\u002F302707950",
+								"title": "除了CS，其他专业做机器学习的PhD就业情况如何？",
+								"excerpt": "现在机器学习方向CS PhD申请太过激烈，有许多有优秀文章的申请者被全聚德。有些在EC…",
+								"detail": "\u003Cp\u003E现在机器学习方向CS PhD申请太过激烈，有许多有优秀文章的申请者被全聚德。有些在ECE、统计、IE\u002FOR的教授们也做机器学习，所以申请这些非CS专业的PhD算是另一种可行性更高的路线。但是，在phd期间科研情况相同的情况下(比如5-8篇顶会一作\u002F共同一作，ICML\u002FNIPS\u002FICLR这种)，毕业找工作的时候会由于学位名称非CS而受到一些就业歧视吗？就业方向包括：1. 学术界 2. 工业界research lab 3. 科技业 4. 金融业(quant)。最近很困惑这个问题，期待大家的解答，谢谢！\u003C\u002Fp\u003E",
+								"answerCount": 15,
+								"boundTopicIds": [2852, 3084, 5259, 10033, 28137],
+								"commentCount": 4,
+								"isFollowing": false,
+								"followerCount": 860,
+								"type": "question",
+								"id": 302707950
+							},
+							"303381186": {
+								"author": {
+									"isFollowed": false,
+									"type": "people",
+									"name": "张可",
+									"headline": "景观设计",
+									"urlToken": "zhang-ke-27-3",
+									"userType": "people",
+									"vipInfo": null,
+									"url": "https:\u002F\u002Fapi.zhihu.com\u002Fpeople\u002F9cd9d8fe34b46f699cc516bdedc109b4",
+									"avatarUrl": "https:\u002F\u002Fpic4.zhimg.com\u002F50\u002Fv2-0f99d5abe81973f3cf0f9335d1500e7c_s.jpg",
+									"isFollowing": false,
+									"isOrg": false,
+									"gender": 0,
+									"badge": [],
+									"id": "9cd9d8fe34b46f699cc516bdedc109b4"
+								},
+								"relationship": {
+									"isAuthor": false,
+									"isFollowing": false
+								},
+								"created": 1542960759,
+								"url": "https:\u002F\u002Fapi.zhihu.com\u002Fquestions\u002F303381186",
+								"title": "2019 年，你的研究领域有哪些新趋势，又会面临哪些新挑战？",
+								"excerpt": "",
+								"detail": "",
+								"answerCount": 17,
+								"boundTopicIds": [406, 2232, 3252, 5259, 380061],
+								"commentCount": 0,
+								"isFollowing": false,
+								"followerCount": 332,
+								"type": "question",
+								"id": 303381186
+							},
+							"308547945": {
+								"author": {
+									"isFollowed": false,
+									"type": "people",
+									"name": "Todd",
+									"headline": "",
+									"urlToken": "liuzhuang",
+									"userType": "people",
+									"vipInfo": null,
+									"url": "https:\u002F\u002Fapi.zhihu.com\u002Fpeople\u002Fc66efa6d1faeb696e5c29530f34b2030",
+									"avatarUrl": "https:\u002F\u002Fpic4.zhimg.com\u002F50\u002F5a2fd02bd_s.jpg",
+									"isFollowing": false,
+									"isOrg": false,
+									"gender": 1,
+									"badge": [],
+									"id": "c66efa6d1faeb696e5c29530f34b2030"
+								},
+								"relationship": {
+									"isAuthor": false,
+									"isFollowing": false
+								},
+								"created": 1547019101,
+								"url": "https:\u002F\u002Fapi.zhihu.com\u002Fquestions\u002F308547945",
+								"title": "未来 3-5 年，互联网从业者的能力结构需要有哪些更新？",
+								"excerpt": "2018 后半年，感觉整个行业变化很大，能够感受到一丝慌乱。身为从业者，要怎么度过…",
+								"detail": "\u003Cp\u003E2018 后半年，感觉整个行业变化很大，能够感受到一丝慌乱。身为从业者，要怎么度过这段时间呢？能力结构需要有哪些调整？\u003C\u002Fp\u003E",
+								"answerCount": 35,
+								"boundTopicIds": [99, 108, 227, 2143, 2476],
+								"commentCount": 0,
+								"isFollowing": false,
+								"followerCount": 2364,
+								"type": "question",
+								"id": 308547945
+							}
+						},
+						"answers": {
+							"581381112": {
+								"relationship": {
+									"isAuthor": false,
+									"voting": 0,
+									"isThanked": false,
+									"isNothelp": false,
+									"upvotedFolloweeIds": []
+								},
+								"markInfos": [],
+								"excerpt": "我觉得在当前的时代背景下，各行各业的人都应该致力于培养正确的「\u003Cb\u003E数据观\u003C\u002Fb\u003E」。现阶段的数据、数据科学、机器学习、人工智能很像是大家开玩笑所说的teenage sex：即每个人都在谈论且声称自己的团队是数据驱动的，但真正明白如何去做和真的做了的公司却是极少数。Artificial Intelligence is like teenage sex: everyone talks about it, nobody really knows how to do it, everyone thinks everyone else is doing it, so everyon…",
+								"createdTime": 1548372844,
+								"previewType": "default",
+								"id": 581381112,
+								"isCopyable": false,
+								"author": {
+									"isFollowed": false,
+									"type": "people",
+									"name": "微调",
+									"headline": "数据挖掘",
+									"urlToken": "breaknever",
+									"userType": "people",
+									"vipInfo": null,
+									"url": "https:\u002F\u002Fapi.zhihu.com\u002Fpeople\u002Fe3f5794fa10022aa07c05b0b9e6dc537",
+									"avatarUrl": "https:\u002F\u002Fpic3.zhimg.com\u002F50\u002Fv2-4e988956c93a819e719cee6e33d0b773_s.jpg",
+									"isFollowing": false,
+									"isOrg": false,
+									"gender": 0,
+									"badge": [{
+										"topics": [],
+										"topicNames": ["机器学习", "数据挖掘", "人工智能", "统计学"],
+										"type": "best_answerer",
+										"description": "优秀回答者"
+									}],
+									"id": "e3f5794fa10022aa07c05b0b9e6dc537"
+								},
+								"url": "https:\u002F\u002Fapi.zhihu.com\u002Fanswers\u002F581381112",
+								"commentPermission": "all",
+								"question": {
+									"author": {
+										"isFollowed": false,
+										"type": "people",
+										"name": "Todd",
+										"headline": "",
+										"urlToken": "liuzhuang",
+										"userType": "people",
+										"vipInfo": null,
+										"url": "https:\u002F\u002Fapi.zhihu.com\u002Fpeople\u002Fc66efa6d1faeb696e5c29530f34b2030",
+										"avatarUrl": "https:\u002F\u002Fpic4.zhimg.com\u002F50\u002F5a2fd02bd_s.jpg",
+										"isFollowing": false,
+										"isOrg": false,
+										"gender": 1,
+										"badge": [],
+										"id": "c66efa6d1faeb696e5c29530f34b2030"
+									},
+									"created": 1547019101,
+									"url": "https:\u002F\u002Fapi.zhihu.com\u002Fquestions\u002F308547945",
+									"title": "未来 3-5 年，互联网从业者的能力结构需要有哪些更新？",
+									"excerpt": "2018 后半年，感觉整个行业变化很大，能够感受到一丝慌乱。身为从业者，要怎么度过这段时间呢？能力结构需要有哪些调整？",
+									"answerCount": 35,
+									"boundTopicIds": [99, 108, 227, 2143, 2476],
+									"commentCount": 0,
+									"isFollowing": false,
+									"followerCount": 2364,
+									"type": "question",
+									"id": 308547945
+								},
+								"updatedTime": 1548372844,
+								"content": "\u003Cp\u003E我觉得在当前的时代背景下，各行各业的人都应该致力于培养正确的「\u003Cb\u003E数据观\u003C\u002Fb\u003E」。\u003C\u002Fp\u003E\u003Cp\u003E现阶段的数据、数据科学、机器学习、人工智能很像是大家开玩笑所说的teenage sex：即每个人都在谈论且声称自己的团队是数据驱动的，但真正明白如何去做和真的做了的公司却是极少数。\u003C\u002Fp\u003E\u003Cblockquote\u003EArtificial Intelligence is like teenage sex: everyone talks about it, nobody really knows how to do it, everyone thinks everyone else is doing it, so everyone claims they are doing it.\u003C\u002Fblockquote\u003E\u003Cp\u003E而培养「数据观」的过程大概可以被分解为：(i) 建立主动收集数据的意识；(ii) 提升对于数据储存和安全的理解；（iii）明白数据的价值--知道如何进一步利用数据。\u003C\u002Fp\u003E\u003Cp\u003E\u003Cb\u003E主动收集数据的意识\u003C\u002Fb\u003E。虽然很多数据在短时间内看和业务相关性不高，但能“预见”这样的信息在未来可能是有用的。举个最简单的例子，很多开小卖铺的阿姨们都有个神秘的笔记本（或者记在脑子里面），他们知道熟客需要买什么，甚至到了日子会准备好东西等着客人来拿。与小卖铺阿姨们不同，互联网上的用户有高流动性，我们很少能做到定点分析（在个人层面上分析），但往往可以以族群进行分析，比如「这类人」的购买习惯是什么。最常见的就是用户画像或者用户分类（client segmentation），并对不同的类型的客户进行制定不同的策略，而这就需要我们有主动收集信息的意识，并进行长期收集，这样的数据更有意义。\u003Cb\u003E很多短期内看起来没那么重要的数据，可能在未来会发挥重要作用\u003C\u002Fb\u003E。因此从业者应该尝试连点成线，思考现阶段看起来无用的数据是否真的毫无价值。在低成本的数据储存前提下，保存数据比丢弃数据的风险更低。\u003C\u002Fp\u003E\u003Cp\u003E\u003Cb\u003E数据储存与安全\u003C\u002Fb\u003E。在有了数据收集的意识后，要明白如何收集数据。做数据分析的人都知道，数据预处理是多么耗时和痛苦的事情，尤其是数据中往往存在缺失与错误。因此在数据收集过程中就要思考如何储存。\u003Cb\u003E在理想情况下，数据应该是被结构化储存的\u003C\u002Fb\u003E，大部分现代的ERP系统都可以实现这种功能的功能。退一步说，即使无法投资ERP，也应该尽量以结构化的思维思考如何保存数据，比如是设计三个数据库用同一个主键（primary key）还是用五个excel来保存之后再做关联呢？甚至也有人会说可以把所有数据打印出来，之后锁到箱子里面。虽然这只是个玩笑，但很多传统行业的从业者的确不大了解新兴的数据储存方法，常常会保存PDF，导致数据读取成本很高。\u003Cb\u003E在思考数据储存方法的时候，同时也得考虑到数据安全性\u003C\u002Fb\u003E，比如把数据储存在一台不联网的机器上，还是分布式的储存在云端。每种方法都有自己的优缺点，这需要从业者根据具体情况具体分析，便携性与安全无法兼得。\u003C\u002Fp\u003E\u003Cp\u003E\u003Cb\u003E明白的数据的价值\u003C\u002Fb\u003E。这十年是机器学习的时代，每个人每个行业都在谈如何利用机器学习来提高我们的预测能力或者自动化现有的人工流程。但不幸的是，机器学习是非常专精的领域，真正的高端人才一将难求，因此大规模部署或者利用机器学习对于大部分企业来说都还太早了一些。在这个阶段，\u003Cb\u003E互联网从业者即使不自己去深入机器学习，也应该对机器学习是什么有个基础认识\u003C\u002Fb\u003E（可以参考：\u003Ca href=\"https:\u002F\u002Fwww.zhihu.com\u002Fquestion\u002F294147625\u002Fanswer\u002F490538339\" class=\"internal\"\u003E机器学习到底是什么，如何使用这项技术？\u003C\u002Fa\u003E）。\u003Cb\u003E作为一个互联网从业者，至少应该明白什么是机器学习可以做的，什么是现阶段还有瓶颈的\u003C\u002Fb\u003E。了解了这点后，\u003Cb\u003E就可以防止过度迷信或者对于新技术不屑一顾这两种极端情绪中\u003C\u002Fb\u003E。更重要的是，拥有了对机器学习的基础了解，从业者可以找到最合适的案例，逐步将机器学习部署到现有的环境中去，而非想要一口吃个胖子。同时也可以避免被别人用新兴概念所忽悠，投入无意义的时间与金钱。\u003C\u002Fp\u003E\u003Cp\u003E总结来看，\u003Cb\u003E我们离完全的数据驱动以及人工智能还有相当远的距离，但这正是培养「数据观」的良好时机\u003C\u002Fb\u003E。唯有如此，我们才不会在数据时代成为“民科”，陷入怀疑或是迷信的误区中去。退一步说，即使并非互联网从业者，良好的数据观也可以成为一种理性思考的方式，值得每个人都去了解一下。\u003C\u002Fp\u003E\u003Cp\u003E\u003C\u002Fp\u003E\u003Cp\u003E\u003C\u002Fp\u003E",
+								"commentCount": 8,
+								"voteupCount": 76,
+								"reshipmentSettings": "need_payment",
+								"thanksCount": 15,
+								"excerptNew": "我觉得在当前的时代背景下，各行各业的人都应该致力于培养正确的「数据观」。 现阶段的数据、数据科学、机器学习、人工智能很像是大家开玩笑所说的teenage sex：即每个人都在谈论且声称自己的团队是数据驱动的，但真正明白如何去做和真的做了的公司却是极少数。…",
+								"previewText": "",
+								"canComment": {
+									"status": true,
+									"reason": ""
+								},
+								"type": "answer",
+								"thumbnail": ""
+							},
+							"582902404": {
+								"relationship": {
+									"isAuthor": false,
+									"voting": 0,
+									"isThanked": false,
+									"isNothelp": false,
+									"upvotedFolloweeIds": []
+								},
+								"markInfos": [],
+								"excerpt": "更新：截止至2019年1月27日美东时间4:00PM，请愿书已搜集超过2,059份签名。请愿书起草委员会已接受纽约时报，华盛顿邮报，BBC等一线媒体记者的邮件采访，以下是他们最新的一份公告，由本公众号代为转发。请愿书起草委员会联系方式concerneddukestudents2019@gmail.com最新公告：\u003Ca href=\"http:\u002F\u002Flink.zhihu.com\u002F?target=https%3A\u002F\u002Fmp.weixin.qq.com\u002Fs\u002F3NjKTVjG-CrC-gD4SVYe_A\" class=\" external\" target=\"_blank\" rel=\"nofollow noreferrer\"\u003E\u003Cspan class=\"invisible\"\u003Ehttps:\u002F\u002F\u003C\u002Fspan\u003E\u003Cspan class=\"visible\"\u003Emp.weixin.qq.com\u002Fs\u002F3NjK\u003C\u002Fspan\u003E\u003Cspan class=\"invisible\"\u003ETVjG-CrC-gD4SVYe_A\u003C\u002Fspan\u003E\u003Cspan class=\"ellipsis\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E帮扩一份几个朋友连夜一起写的Petition，欢迎扩散转发签名链接：\u003Ca href=\"http:\u002F\u002Flink.zhihu.com\u002F?target=https%3A\u002F\u002Fdocs.google.com\u002Fforms\u002Fd\u002Fe\u002F1FAIpQLScN9qBBtt6l9XbY0c17hVM8UlUMpDpOfTMVT4Q_KL92KyX22g\u002Fviewform\" class=\" external\" target=\"_blank\" rel=\"nofollow noreferrer\"\u003E\u003Cspan class=\"invisible\"\u003Ehttps:\u002F\u002F\u003C\u002Fspan\u003E\u003Cspan class=\"visible\"\u003Edocs.google.com\u002Fforms\u002Fd\u003C\u002Fspan\u003E\u003Cspan class=\"invisible\"\u003E\u002Fe\u002F1FAIpQLScN9qBBtt6l9XbY0c17hVM8UlUMpDpOfTMVT4Q_KL92KyX22g\u002Fviewform\u003C\u002Fspan\u003E\u003Cspan class=\"ellipsis\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E（不限学校，非duke的朋友也可以填的）公开…",
+								"createdTime": 1548531723,
+								"previewType": "default",
+								"id": 582902404,
+								"isCopyable": true,
+								"author": {
+									"headline": "",
+									"avatarUrl": "https:\u002F\u002Fpic4.zhimg.com\u002Faadd7b895_s.jpg",
+									"name": "匿名用户",
+									"url": "",
+									"urlToken": "",
+									"type": "people",
+									"userType": "people",
+									"id": "0"
+								},
+								"url": "https:\u002F\u002Fapi.zhihu.com\u002Fanswers\u002F582902404",
+								"commentPermission": "all",
+								"question": {
+									"author": {
+										"headline": "",
+										"avatarUrl": "https:\u002F\u002Fpic4.zhimg.com\u002Faadd7b895_s.jpg",
+										"name": "匿名用户",
+										"url": "",
+										"urlToken": "",
+										"type": "people",
+										"userType": "people",
+										"id": "0"
+									},
+									"created": 1548499059,
+									"url": "https:\u002F\u002Fapi.zhihu.com\u002Fquestions\u002F310353421",
+									"title": "如何评价杜克大学生物统计系劝阻中国学生在学系大楼内讲中文？",
+									"excerpt": "杜克大学生物统计系的中国学生在课间休息时间于学生休息处和朋友使用中文“大声”聊天。该系研究生项目负责人Megan Neely得知此事后，向全系所有学生群发邮件警告，但并未提到音量问题，却大费笔墨着重强调在学系楼内说中文不合适、在系里要100%说英文，涉嫌种族歧视。 有杜克大学毕业生在朋友圈表示，该系已经不是第一次这样发送歧视中国人的全系通告邮件。 Megan Neely的邮件全文截图如下： 这是Megan Neely的另一封邮件：",
+									"answerCount": 430,
+									"boundTopicIds": [2232, 3251, 3252, 27287, 74080],
+									"commentCount": 50,
+									"isFollowing": false,
+									"followerCount": 2896,
+									"type": "question",
+									"id": 310353421
+								},
+								"updatedTime": 1548647846,
+								"content": "\u003Cp\u003E更新：截止至2019年1月27日美东时间4:00PM，请愿书已搜集超过2,059份签名。请愿书起草委员会已接受纽约时报，华盛顿邮报，BBC等一线媒体记者的邮件采访，以下是他们最新的一份公告，由本公众号代为转发。请愿书起草委员会联系方式concerneddukestudents2019@gmail.com\u003C\u002Fp\u003E\u003Cp\u003E最新公告：\u003Ca href=\"http:\u002F\u002Flink.zhihu.com\u002F?target=https%3A\u002F\u002Fmp.weixin.qq.com\u002Fs\u002F3NjKTVjG-CrC-gD4SVYe_A\" class=\" external\" target=\"_blank\" rel=\"nofollow noreferrer\"\u003E\u003Cspan class=\"invisible\"\u003Ehttps:\u002F\u002F\u003C\u002Fspan\u003E\u003Cspan class=\"visible\"\u003Emp.weixin.qq.com\u002Fs\u002F3NjK\u003C\u002Fspan\u003E\u003Cspan class=\"invisible\"\u003ETVjG-CrC-gD4SVYe_A\u003C\u002Fspan\u003E\u003Cspan class=\"ellipsis\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E\u003C\u002Fp\u003E\u003Cp\u003E帮扩一份几个朋友连夜一起写的Petition，欢迎扩散转发\u003C\u002Fp\u003E\u003Cp\u003E签名链接：\u003Ca href=\"http:\u002F\u002Flink.zhihu.com\u002F?target=https%3A\u002F\u002Fdocs.google.com\u002Fforms\u002Fd\u002Fe\u002F1FAIpQLScN9qBBtt6l9XbY0c17hVM8UlUMpDpOfTMVT4Q_KL92KyX22g\u002Fviewform\" class=\" external\" target=\"_blank\" rel=\"nofollow noreferrer\"\u003E\u003Cspan class=\"invisible\"\u003Ehttps:\u002F\u002F\u003C\u002Fspan\u003E\u003Cspan class=\"visible\"\u003Edocs.google.com\u002Fforms\u002Fd\u003C\u002Fspan\u003E\u003Cspan class=\"invisible\"\u003E\u002Fe\u002F1FAIpQLScN9qBBtt6l9XbY0c17hVM8UlUMpDpOfTMVT4Q_KL92KyX22g\u002Fviewform\u003C\u002Fspan\u003E\u003Cspan class=\"ellipsis\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E\u003C\u002Fp\u003E\u003Cp\u003E（不限学校，非duke的朋友也可以填的）\u003C\u002Fp\u003E\u003Cp\u003E公开信链接：\u003Ca href=\"http:\u002F\u002Flink.zhihu.com\u002F?target=https%3A\u002F\u002Fdrive.google.com\u002Ffile\u002Fd\u002F1Tq_LVOp5eM9RET0117DEXnv46psM_xbJ\u002Fview\" class=\" external\" target=\"_blank\" rel=\"nofollow noreferrer\"\u003E\u003Cspan class=\"invisible\"\u003Ehttps:\u002F\u002F\u003C\u002Fspan\u003E\u003Cspan class=\"visible\"\u003Edrive.google.com\u002Ffile\u002Fd\u003C\u002Fspan\u003E\u003Cspan class=\"invisible\"\u003E\u002F1Tq_LVOp5eM9RET0117DEXnv46psM_xbJ\u002Fview\u003C\u002Fspan\u003E\u003Cspan class=\"ellipsis\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E\u003C\u002Fp\u003E\u003Cfigure\u003E\u003Cimg src=\"https:\u002F\u002Fpic3.zhimg.com\u002Fv2-b1ad8791de8c8abd3f10a9353f7d4251_b.jpg\" data-rawwidth=\"622\" data-rawheight=\"847\" data-size=\"normal\" data-caption=\"\" class=\"origin_image zh-lightbox-thumb\" width=\"622\" data-original=\"https:\u002F\u002Fpic3.zhimg.com\u002Fv2-b1ad8791de8c8abd3f10a9353f7d4251_r.jpg\"\u003E\u003C\u002Ffigure\u003E\u003Cfigure\u003E\u003Cimg src=\"https:\u002F\u002Fpic2.zhimg.com\u002Fv2-6854cd2789b8d0b230488360036cb3ae_b.jpg\" data-rawwidth=\"640\" data-rawheight=\"874\" data-size=\"normal\" data-caption=\"\" class=\"origin_image zh-lightbox-thumb\" width=\"640\" data-original=\"https:\u002F\u002Fpic2.zhimg.com\u002Fv2-6854cd2789b8d0b230488360036cb3ae_r.jpg\"\u003E\u003C\u002Ffigure\u003E\u003Cp\u003E更新一段William新的发言：\u003C\u002Fp\u003E\u003Cfigure\u003E\u003Cimg src=\"https:\u002F\u002Fpic2.zhimg.com\u002Fv2-eae614e31b347e67ddd3a05841794d06_b.jpg\" data-rawwidth=\"698\" data-rawheight=\"618\" data-size=\"normal\" class=\"origin_image zh-lightbox-thumb\" width=\"698\" data-original=\"https:\u002F\u002Fpic2.zhimg.com\u002Fv2-eae614e31b347e67ddd3a05841794d06_r.jpg\"\u003E\u003C\u002Ffigure\u003E\u003Cp\u003E\u003C\u002Fp\u003E",
+								"commentCount": 74,
+								"voteupCount": 600,
+								"reshipmentSettings": "allowed",
+								"thanksCount": 59,
+								"excerptNew": "更新：截止至2019年1月27日美东时间4:00PM，请愿书已搜集超过2,059份签名。请愿书起草委员会已接受纽约时报，华盛顿邮报，BBC等一线媒体记者的邮件采访，以下是他们最新的一份公告，由本公众号代为转发。请愿书起草委员会联系方式concerneddukestudents2019@gm…",
+								"previewText": "",
+								"canComment": {
+									"status": true,
+									"reason": ""
+								},
+								"type": "answer",
+								"thumbnail": "https:\u002F\u002Fpic2.zhimg.com\u002F50\u002Fv2-6854cd2789b8d0b230488360036cb3ae_200x112.jpg"
+							}
+						},
+						"articles": {},
+						"columns": {},
+						"topics": {},
+						"roundtables": {},
+						"favlists": {},
+						"comments": {},
+						"notifications": {},
+						"ebooks": {},
+						"activities": {
+							"1548110737": {
+								"target": {
+									"id": 308547945,
+									"schema": "question"
+								},
+								"actionText": "关注了问题",
+								"actor": {
+									"isFollowed": false,
+									"type": "people",
+									"name": "微调",
+									"headline": "数据挖掘",
+									"urlToken": "breaknever",
+									"userType": "people",
+									"vipInfo": {
+										"isVip": true,
+										"vipIcon": {
+											"url": "https:\u002F\u002Fpic2.zhimg.com\u002F50\u002Fv2-68cefc7c2cb18645322a6377219841bf_r.png",
+											"nightModeUrl": "https:\u002F\u002Fpic1.zhimg.com\u002F50\u002Fv2-9d59e5fce176ed45e29b5ae2d8c448d2_r.png"
+										}
+									},
+									"url": "https:\u002F\u002Fapi.zhihu.com\u002Fpeople\u002Fe3f5794fa10022aa07c05b0b9e6dc537",
+									"avatarUrl": "https:\u002F\u002Fpic3.zhimg.com\u002F50\u002Fv2-4e988956c93a819e719cee6e33d0b773_s.jpg",
+									"isFollowing": false,
+									"isOrg": false,
+									"gender": 0,
+									"badge": [],
+									"id": "e3f5794fa10022aa07c05b0b9e6dc537"
+								},
+								"verb": "QUESTION_FOLLOW",
+								"createdTime": 1548110737,
+								"type": "feed",
+								"id": "1548110737"
+							},
+							"1548110783": {
+								"target": {
+									"id": 303381186,
+									"schema": "question"
+								},
+								"actionText": "关注了问题",
+								"actor": {
+									"isFollowed": false,
+									"type": "people",
+									"name": "微调",
+									"headline": "数据挖掘",
+									"urlToken": "breaknever",
+									"userType": "people",
+									"vipInfo": {
+										"isVip": true,
+										"vipIcon": {
+											"url": "https:\u002F\u002Fpic2.zhimg.com\u002F50\u002Fv2-68cefc7c2cb18645322a6377219841bf_r.png",
+											"nightModeUrl": "https:\u002F\u002Fpic1.zhimg.com\u002F50\u002Fv2-9d59e5fce176ed45e29b5ae2d8c448d2_r.png"
+										}
+									},
+									"url": "https:\u002F\u002Fapi.zhihu.com\u002Fpeople\u002Fe3f5794fa10022aa07c05b0b9e6dc537",
+									"avatarUrl": "https:\u002F\u002Fpic3.zhimg.com\u002F50\u002Fv2-4e988956c93a819e719cee6e33d0b773_s.jpg",
+									"isFollowing": false,
+									"isOrg": false,
+									"gender": 0,
+									"badge": [],
+									"id": "e3f5794fa10022aa07c05b0b9e6dc537"
+								},
+								"verb": "QUESTION_FOLLOW",
+								"createdTime": 1548110783,
+								"type": "feed",
+								"id": "1548110783"
+							},
+							"1548130771": {
+								"target": {
+									"id": "1071018763956178944",
+									"schema": "pin"
+								},
+								"actionText": "发布了想法",
+								"actor": {
+									"isFollowed": false,
+									"type": "people",
+									"name": "微调",
+									"headline": "数据挖掘",
+									"urlToken": "breaknever",
+									"userType": "people",
+									"vipInfo": {
+										"isVip": true,
+										"vipIcon": {
+											"url": "https:\u002F\u002Fpic2.zhimg.com\u002F50\u002Fv2-68cefc7c2cb18645322a6377219841bf_r.png",
+											"nightModeUrl": "https:\u002F\u002Fpic1.zhimg.com\u002F50\u002Fv2-9d59e5fce176ed45e29b5ae2d8c448d2_r.png"
+										}
+									},
+									"url": "https:\u002F\u002Fapi.zhihu.com\u002Fpeople\u002Fe3f5794fa10022aa07c05b0b9e6dc537",
+									"avatarUrl": "https:\u002F\u002Fpic3.zhimg.com\u002F50\u002Fv2-4e988956c93a819e719cee6e33d0b773_s.jpg",
+									"isFollowing": false,
+									"isOrg": false,
+									"gender": 0,
+									"badge": [],
+									"id": "e3f5794fa10022aa07c05b0b9e6dc537"
+								},
+								"verb": "MEMBER_CREATE_PIN",
+								"createdTime": 1548130771,
+								"type": "feed",
+								"id": "1548130771"
+							},
+							"1548131133": {
+								"target": {
+									"id": 302707950,
+									"schema": "question"
+								},
+								"actionText": "关注了问题",
+								"actor": {
+									"isFollowed": false,
+									"type": "people",
+									"name": "微调",
+									"headline": "数据挖掘",
+									"urlToken": "breaknever",
+									"userType": "people",
+									"vipInfo": {
+										"isVip": true,
+										"vipIcon": {
+											"url": "https:\u002F\u002Fpic2.zhimg.com\u002F50\u002Fv2-68cefc7c2cb18645322a6377219841bf_r.png",
+											"nightModeUrl": "https:\u002F\u002Fpic1.zhimg.com\u002F50\u002Fv2-9d59e5fce176ed45e29b5ae2d8c448d2_r.png"
+										}
+									},
+									"url": "https:\u002F\u002Fapi.zhihu.com\u002Fpeople\u002Fe3f5794fa10022aa07c05b0b9e6dc537",
+									"avatarUrl": "https:\u002F\u002Fpic3.zhimg.com\u002F50\u002Fv2-4e988956c93a819e719cee6e33d0b773_s.jpg",
+									"isFollowing": false,
+									"isOrg": false,
+									"gender": 0,
+									"badge": [],
+									"id": "e3f5794fa10022aa07c05b0b9e6dc537"
+								},
+								"verb": "QUESTION_FOLLOW",
+								"createdTime": 1548131133,
+								"type": "feed",
+								"id": "1548131133"
+							},
+							"1548372844": {
+								"target": {
+									"id": 581381112,
+									"schema": "answer"
+								},
+								"actionText": "回答了问题",
+								"actor": {
+									"isFollowed": false,
+									"type": "people",
+									"name": "微调",
+									"headline": "数据挖掘",
+									"urlToken": "breaknever",
+									"userType": "people",
+									"vipInfo": {
+										"isVip": true,
+										"vipIcon": {
+											"url": "https:\u002F\u002Fpic2.zhimg.com\u002F50\u002Fv2-68cefc7c2cb18645322a6377219841bf_r.png",
+											"nightModeUrl": "https:\u002F\u002Fpic1.zhimg.com\u002F50\u002Fv2-9d59e5fce176ed45e29b5ae2d8c448d2_r.png"
+										}
+									},
+									"url": "https:\u002F\u002Fapi.zhihu.com\u002Fpeople\u002Fe3f5794fa10022aa07c05b0b9e6dc537",
+									"avatarUrl": "https:\u002F\u002Fpic3.zhimg.com\u002F50\u002Fv2-4e988956c93a819e719cee6e33d0b773_s.jpg",
+									"isFollowing": false,
+									"isOrg": false,
+									"gender": 0,
+									"badge": [],
+									"id": "e3f5794fa10022aa07c05b0b9e6dc537"
+								},
+								"verb": "ANSWER_CREATE",
+								"createdTime": 1548372844,
+								"type": "feed",
+								"id": "1548372844"
+							},
+							"1548380675": {
+								"target": {
+									"id": "1072066933461094400",
+									"schema": "pin"
+								},
+								"actionText": "发布了想法",
+								"actor": {
+									"isFollowed": false,
+									"type": "people",
+									"name": "微调",
+									"headline": "数据挖掘",
+									"urlToken": "breaknever",
+									"userType": "people",
+									"vipInfo": {
+										"isVip": true,
+										"vipIcon": {
+											"url": "https:\u002F\u002Fpic2.zhimg.com\u002F50\u002Fv2-68cefc7c2cb18645322a6377219841bf_r.png",
+											"nightModeUrl": "https:\u002F\u002Fpic1.zhimg.com\u002F50\u002Fv2-9d59e5fce176ed45e29b5ae2d8c448d2_r.png"
+										}
+									},
+									"url": "https:\u002F\u002Fapi.zhihu.com\u002Fpeople\u002Fe3f5794fa10022aa07c05b0b9e6dc537",
+									"avatarUrl": "https:\u002F\u002Fpic3.zhimg.com\u002F50\u002Fv2-4e988956c93a819e719cee6e33d0b773_s.jpg",
+									"isFollowing": false,
+									"isOrg": false,
+									"gender": 0,
+									"badge": [],
+									"id": "e3f5794fa10022aa07c05b0b9e6dc537"
+								},
+								"verb": "MEMBER_CREATE_PIN",
+								"createdTime": 1548380675,
+								"type": "feed",
+								"id": "1548380675"
+							},
+							"1548536262": {
+								"target": {
+									"id": 582902404,
+									"schema": "answer"
+								},
+								"actionText": "赞同了回答",
+								"actor": {
+									"isFollowed": false,
+									"type": "people",
+									"name": "微调",
+									"headline": "数据挖掘",
+									"urlToken": "breaknever",
+									"userType": "people",
+									"vipInfo": {
+										"isVip": true,
+										"vipIcon": {
+											"url": "https:\u002F\u002Fpic2.zhimg.com\u002F50\u002Fv2-68cefc7c2cb18645322a6377219841bf_r.png",
+											"nightModeUrl": "https:\u002F\u002Fpic1.zhimg.com\u002F50\u002Fv2-9d59e5fce176ed45e29b5ae2d8c448d2_r.png"
+										}
+									},
+									"url": "https:\u002F\u002Fapi.zhihu.com\u002Fpeople\u002Fe3f5794fa10022aa07c05b0b9e6dc537",
+									"avatarUrl": "https:\u002F\u002Fpic3.zhimg.com\u002F50\u002Fv2-4e988956c93a819e719cee6e33d0b773_s.jpg",
+									"isFollowing": false,
+									"isOrg": false,
+									"gender": 0,
+									"badge": [],
+									"id": "e3f5794fa10022aa07c05b0b9e6dc537"
+								},
+								"verb": "ANSWER_VOTE_UP",
+								"createdTime": 1548536262,
+								"type": "feed",
+								"id": "1548536262"
+							}
+						},
+						"feeds": {},
+						"pins": {
+							"1072066933461094400": {
+								"reactionType": "",
+								"liked": false,
+								"created": 1548380674,
+								"url": "https:\u002F\u002Fapi.zhihu.com\u002Fpins\u002F1072066933461094400",
+								"commentPermission": "all",
+								"author": {
+									"isFollowed": false,
+									"type": "people",
+									"name": "微调",
+									"headline": "数据挖掘",
+									"urlToken": "breaknever",
+									"userType": "people",
+									"vipInfo": null,
+									"url": "https:\u002F\u002Fapi.zhihu.com\u002Fpeople\u002Fe3f5794fa10022aa07c05b0b9e6dc537",
+									"avatarUrl": "https:\u002F\u002Fpic3.zhimg.com\u002F50\u002Fv2-4e988956c93a819e719cee6e33d0b773_s.jpg",
+									"isFollowing": false,
+									"isOrg": false,
+									"gender": 0,
+									"badge": [],
+									"id": "e3f5794fa10022aa07c05b0b9e6dc537"
+								},
+								"updated": 1548380674,
+								"previewType": "expand",
+								"content": [{
+									"content": "为什么大部分答主的创作激情和产量会在一段时间（1-2年）后下降呢？\u003Cbr\u003E其实很多人都独立发现过这个规律：说白了就是肚子里的存货倒的差不多了，强行高产就难免就成了人类的本质—复读机。以我为例，现在看到很多提问只需要复制粘贴一下自己以前的答案就可以了，也就丧失了写作的乐趣。\u003Cbr\u003E除此之外，写作初期很容易受到外部的正面鼓励，比如赞同、关注以及官方的认可。但后期心里阈值也逐渐上升，愈发迟钝起来。毕竟社区会老，答主也会老。\u003Cbr\u003E\u003Ca class=\"hash_tag\" href=\"https:\u002F\u002Fwww.zhihu.com\u002Fsearch?q=%23%E6%89%80%E4%BB%A5%E8%BF%99%E5%B0%B1%E6%98%AF%E4%BD%A0%E4%B8%80%E7%9B%B4%E6%91%B8%E9%B1%BC%E7%9A%84%E5%8E%9F%E5%9B%A0%E5%90%97%23\"\u003E#所以这就是你一直摸鱼的原因吗#\u003C\u002Fa\u003E",
+									"foldType": "raw",
+									"ownText": "为什么大部分答主的创作激情和产量会在一段时间（1-2年）后下降呢？\u003Cbr\u003E其实很多人都独立发现过这个规律：说白了就是肚子里的存货倒的差不多了，强行高产就难免就成了人类的本质—复读机。以我为例，现在看到很多提问只需要复制粘贴一下自己以前的答案就可以了，也就丧失了写作的乐趣。\u003Cbr\u003E除此之外，写作初期很容易受到外部的正面鼓励，比如赞同、关注以及官方的认可。但后期心里阈值也逐渐上升，愈发迟钝起来。毕竟社区会老，答主也会老。\u003Cbr\u003E\u003Ca class=\"hash_tag\" href=\"https:\u002F\u002Fwww.zhihu.com\u002Fsearch?q=%23%E6%89%80%E4%BB%A5%E8%BF%99%E5%B0%B1%E6%98%AF%E4%BD%A0%E4%B8%80%E7%9B%B4%E6%91%B8%E9%B1%BC%E7%9A%84%E5%8E%9F%E5%9B%A0%E5%90%97%23\"\u003E#所以这就是你一直摸鱼的原因吗#\u003C\u002Fa\u003E",
+									"type": "text"
+								}],
+								"commentCount": 56,
+								"likeCount": 0,
+								"excerptNew": "为什么大部分答主的创作激情和产量会在一段时间（1-2年）后下降呢？ 其实很多人都独立发现过这个规律：说白了就是肚子里的存货倒的差不多了，强行高产就难免就成了人类的本质—复读机。以我为例，现在看到很多提问只需要复制粘贴一下自己以前的答案就可以了，也…",
+								"excerptTitle": "为什么大部分答主的创作激情和产量会在一…",
+								"previewText": "为什么大部分答主的创作激情和产量会在一段时间（1-2年）后下降呢？\n其实很多人都独立发现过这个规律：说白了就是肚子里的存货倒的差不多了，强行高产就难免就成了人类的本质—复读机。以我为例，现在看到很多提问只需要复制粘贴一下自己以前的答案就可以了，也就丧失了写作的乐趣。\n除此之外，写作初期很容易受到外部的正面鼓励，比如赞同、关注以及官方的认可。但后期心里阈值也逐渐上升，愈发迟钝起来。毕竟社区会老，答主也会老。\n#所以这就是你一直摸鱼的原因吗#",
+								"type": "pin",
+								"id": "1072066933461094400",
+								"reactionCount": 132
+							},
+							"1071018763956178944": {
+								"reactionType": "",
+								"liked": false,
+								"created": 1548130771,
+								"url": "https:\u002F\u002Fapi.zhihu.com\u002Fpins\u002F1071018763956178944",
+								"commentPermission": "all",
+								"author": {
+									"isFollowed": false,
+									"type": "people",
+									"name": "微调",
+									"headline": "数据挖掘",
+									"urlToken": "breaknever",
+									"userType": "people",
+									"vipInfo": null,
+									"url": "https:\u002F\u002Fapi.zhihu.com\u002Fpeople\u002Fe3f5794fa10022aa07c05b0b9e6dc537",
+									"avatarUrl": "https:\u002F\u002Fpic3.zhimg.com\u002F50\u002Fv2-4e988956c93a819e719cee6e33d0b773_s.jpg",
+									"isFollowing": false,
+									"isOrg": false,
+									"gender": 0,
+									"badge": [],
+									"id": "e3f5794fa10022aa07c05b0b9e6dc537"
+								},
+								"updated": 1548130771,
+								"previewType": "expand",
+								"content": [{
+									"content": "不知道大家所在的行业「数据科学」岗位今年走势如何？我的观察是咨询行业至少是走下坡路的，今年听到最多的两个词就是「整合」以及「裁员」。\u003Cbr\u003E当然，公司一般都对外宣传成「优化精简」。但卖不出去业务，也只能借着合并部门的借口裁人（人员优化），常见的做法是把公司内各个小团队里做数据人整合成一个集中团队。大形势如此，辞职跳槽也要谨慎，别刚进来就被裁掉。如果要加入数据科学团队，要先观察该团队在公司内部的地位如何，是前台、中台还是后台。不能直接产生利润或者可有可无的部门风险很大，再加上数据科学本身的性质不容易直接产生利润，更要谨慎决策。",
+									"foldType": "raw",
+									"ownText": "不知道大家所在的行业「数据科学」岗位今年走势如何？我的观察是咨询行业至少是走下坡路的，今年听到最多的两个词就是「整合」以及「裁员」。\u003Cbr\u003E当然，公司一般都对外宣传成「优化精简」。但卖不出去业务，也只能借着合并部门的借口裁人（人员优化），常见的做法是把公司内各个小团队里做数据人整合成一个集中团队。大形势如此，辞职跳槽也要谨慎，别刚进来就被裁掉。如果要加入数据科学团队，要先观察该团队在公司内部的地位如何，是前台、中台还是后台。不能直接产生利润或者可有可无的部门风险很大，再加上数据科学本身的性质不容易直接产生利润，更要谨慎决策。",
+									"type": "text"
+								}],
+								"commentCount": 11,
+								"likeCount": 0,
+								"excerptNew": "不知道大家所在的行业「数据科学」岗位今年走势如何？我的观察是咨询行业至少是走下坡路的，今年听到最多的两个词就是「整合」以及「裁员」。 当然，公司一般都对外宣传成「优化精简」。但卖不出去业务，也只能借着合并部门的借口裁人（人员优化），常见的做法…",
+								"excerptTitle": "不知道大家所在的行业「数据科学」岗位今…",
+								"previewText": "不知道大家所在的行业「数据科学」岗位今年走势如何？我的观察是咨询行业至少是走下坡路的，今年听到最多的两个词就是「整合」以及「裁员」。\n当然，公司一般都对外宣传成「优化精简」。但卖不出去业务，也只能借着合并部门的借口裁人（人员优化），常见的做法是把公司内各个小团队里做数据人整合成一个集中团队。大形势如此，辞职跳槽也要谨慎，别刚进来就被裁掉。如果要加入数据科学团队，要先观察该团队在公司内部的地位如何，是前台、中台还是后台。不能直接产生利润或者可有可无的部门风险很大，再加上数据科学本身的性质不容易直接产生利润，更要谨慎决策。",
+								"type": "pin",
+								"id": "1071018763956178944",
+								"reactionCount": 40
+							}
+						},
+						"promotions": {},
+						"drafts": {}
+					},
+					"currentUser": "",
+					"account": {
+						"lockLevel": {},
+						"unlockTicketStatus": false,
+						"unlockTicket": null,
+						"challenge": [],
+						"errorStatus": false,
+						"message": "",
+						"isFetching": false,
+						"accountInfo": {},
+						"urlToken": {
+							"loading": false
+						}
+					},
+					"settings": {
+						"socialBind": null,
+						"inboxMsg": null,
+						"notification": {},
+						"privacyFlag": null,
+						"blockedUsers": {
+							"isFetching": false,
+							"paging": {
+								"pageNo": 1,
+								"pageSize": 6
+							},
+							"data": []
+						},
+						"blockedFollowees": {
+							"isFetching": false,
+							"paging": {
+								"pageNo": 1,
+								"pageSize": 6
+							},
+							"data": []
+						},
+						"ignoredTopics": {
+							"isFetching": false,
+							"paging": {
+								"pageNo": 1,
+								"pageSize": 6
+							},
+							"data": []
+						},
+						"restrictedTopics": null,
+						"laboratory": {}
+					},
+					"notification": {},
+					"people": {
+						"profileStatus": {
+							"breaknever": {
+								"token": {
+									"id": "e3f5794fa10022aa07c05b0b9e6dc537",
+									"urlToken": "breaknever"
+								},
+								"isFetching": false,
+								"isDrained": true
+							}
+						},
+						"activitiesByUser": {
+							"breaknever": {
+								"isFetching": false,
+								"isDrained": false,
+								"ids": ["1548536262", "1548380675", "1548372844", "1548131133", "1548130771", "1548110783", "1548110737"],
+								"newIds": ["1548536262", "1548380675", "1548372844", "1548131133", "1548130771", "1548110783", "1548110737"],
+								"previous": "http:\u002F\u002Fwww.zhihu.com\u002Fapi\u002Fv4\u002Fmembers\u002Fbreaknever\u002Factivities?before_id=1548536262&limit=7&desktop=True",
+								"next": "http:\u002F\u002Fwww.zhihu.com\u002Fapi\u002Fv4\u002Fmembers\u002Fbreaknever\u002Factivities?limit=7&after_id=1548110737&desktop=True"
+							}
+						},
+						"answersByUser": {},
+						"answersSortByVotesByUser": {},
+						"answersIncludedByUser": {},
+						"votedAnswersByUser": {},
+						"thankedAnswersByUser": {},
+						"voteAnswersByUser": {},
+						"thankAnswersByUser": {},
+						"topicAnswersByUser": {},
+						"articlesByUser": {},
+						"articlesSortByVotesByUser": {},
+						"articlesIncludedByUser": {},
+						"pinsByUser": {},
+						"questionsByUser": {},
+						"commercialQuestionsByUser": {},
+						"favlistsByUser": {},
+						"followingByUser": {},
+						"followersByUser": {},
+						"mutualsByUser": {},
+						"followingColumnsByUser": {},
+						"followingQuestionsByUser": {},
+						"followingFavlistsByUser": {},
+						"followingTopicsByUser": {},
+						"publicationsByUser": {},
+						"columnsByUser": {},
+						"allFavlistsByUser": {},
+						"brands": null,
+						"creationsByUser": {},
+						"creationsSortByVotesByUser": {}
+					},
+					"env": {
+						"ab": {
+							"config": {
+								"experiments": [{
+									"expId": "launch-top_feed_card-1",
+									"expPrefix": "top_feed_card",
+									"isDynamicallyUpdated": true,
+									"isRuntime": false,
+									"includeTriggerInfo": false
+								}, {
+									"expId": "us_verticalclass-1",
+									"expPrefix": "us_verticalclass",
+									"isDynamicallyUpdated": true,
+									"isRuntime": false,
+									"includeTriggerInfo": false
+								}],
+								"params": [{
+									"id": "top_sess_diversity",
+									"type": "String",
+									"value": "-1",
+									"chainId": "_all_"
+								}, {
+									"id": "top_test_4_liguangyi",
+									"type": "String",
+									"value": "1",
+									"chainId": "_all_"
+								}, {
+									"id": "pin_efs",
+									"type": "String",
+									"value": "orig",
+									"chainId": "_all_"
+								}, {
+									"id": "se_backsearch",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "soc_icon",
+									"type": "String",
+									"value": "1",
+									"chainId": "_all_"
+								}, {
+									"id": "top_feedre_rtt",
+									"type": "String",
+									"value": "41",
+									"chainId": "_all_"
+								}, {
+									"id": "top_limit_num",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "top_recall_exp_v1",
+									"type": "String",
+									"value": "1",
+									"chainId": "_all_"
+								}, {
+									"id": "se_billboardsearch",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "se_preset_tech",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "se_websearch",
+									"type": "String",
+									"value": "3",
+									"chainId": "_all_"
+								}, {
+									"id": "top_billpic",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "top_f_r_nb",
+									"type": "String",
+									"value": "1",
+									"chainId": "_all_"
+								}, {
+									"id": "web_heifetz_grow_ad",
+									"type": "String",
+									"value": "1"
+								}, {
+									"id": "ls_new_score",
+									"type": "String",
+									"value": "1",
+									"chainId": "_all_"
+								}, {
+									"id": "pf_newguide_vertical",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "se_entity",
+									"type": "String",
+									"value": "on",
+									"chainId": "_all_"
+								}, {
+									"id": "se_prf",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "top_follow_reason",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "top_freecontent",
+									"type": "String",
+									"value": "1",
+									"chainId": "_all_"
+								}, {
+									"id": "se_major_onebox",
+									"type": "String",
+									"value": "major",
+									"chainId": "_all_"
+								}, {
+									"id": "se_new_market_search",
+									"type": "String",
+									"value": "on",
+									"chainId": "_all_"
+								}, {
+									"id": "se_p_slideshow",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "se_webmajorob",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "top_brand",
+									"type": "String",
+									"value": "1",
+									"chainId": "_all_"
+								}, {
+									"id": "top_newfollow",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "top_is_gr",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "top_login_card",
+									"type": "String",
+									"value": "1",
+									"chainId": "_all_"
+								}, {
+									"id": "top_tagextend",
+									"type": "String",
+									"value": "1",
+									"chainId": "_all_"
+								}, {
+									"id": "web_answer_list_ad",
+									"type": "String",
+									"value": "1"
+								}, {
+									"id": "web_top_hp_thanks",
+									"type": "String",
+									"value": "0"
+								}, {
+									"id": "tp_sft",
+									"type": "String",
+									"value": "a",
+									"chainId": "_all_"
+								}, {
+									"id": "li_filter_ttl",
+									"type": "String",
+									"value": "1",
+									"chainId": "_all_"
+								}, {
+									"id": "li_lt_tp_score",
+									"type": "String",
+									"value": "1",
+									"chainId": "_all_"
+								}, {
+									"id": "se_majorob_style",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "soc_zero_follow",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "top_billab",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "top_tr",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "top_rerank_video",
+									"type": "String",
+									"value": "-1",
+									"chainId": "_all_"
+								}, {
+									"id": "top_v_album",
+									"type": "String",
+									"value": "1",
+									"chainId": "_all_"
+								}, {
+									"id": "se_auto_syn",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "se_sensitive",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "top_followtop",
+									"type": "String",
+									"value": "1",
+									"chainId": "_all_"
+								}, {
+									"id": "top_nucc",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "top_rank",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "top_recall_tb",
+									"type": "String",
+									"value": "1",
+									"chainId": "_all_"
+								}, {
+									"id": "web_new_qa_related",
+									"type": "String",
+									"value": "1"
+								}, {
+									"id": "zr_rel_search",
+									"type": "String",
+									"value": "base",
+									"chainId": "_all_"
+								}, {
+									"id": "top_native_answer",
+									"type": "String",
+									"value": "1",
+									"chainId": "_all_"
+								}, {
+									"id": "top_recall_tb_follow",
+									"type": "String",
+									"value": "71",
+									"chainId": "_all_"
+								}, {
+									"id": "top_yc",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "tp_related_topics",
+									"type": "String",
+									"value": " a",
+									"chainId": "_all_"
+								}, {
+									"id": "web_heifetz_column_api2",
+									"type": "String",
+									"value": "1"
+								}, {
+									"id": "zr_ans_rec",
+									"type": "String",
+									"value": "gbrank",
+									"chainId": "_all_"
+								}, {
+									"id": "se_ios_spb309",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "se_second_search",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "top_reason",
+									"type": "String",
+									"value": "1",
+									"chainId": "_all_"
+								}, {
+									"id": "top_recall_tb_short",
+									"type": "String",
+									"value": "61",
+									"chainId": "_all_"
+								}, {
+									"id": "zr_article_rec_rank",
+									"type": "String",
+									"value": "base",
+									"chainId": "_all_"
+								}, {
+									"id": "ls_new_video",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "top_distinction",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "top_ebook",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "top_root_web",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "web_column_auto_invite",
+									"type": "String",
+									"value": "0"
+								}, {
+									"id": "web_km_ab",
+									"type": "String",
+									"value": "1"
+								}, {
+									"id": "se_new_suggest",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "se_premium_member",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "top_creator_level",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "top_hotlist",
+									"type": "String",
+									"value": "1",
+									"chainId": "_all_"
+								}, {
+									"id": "top_source",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "tp_sticky_android",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "se_consulting_price",
+									"type": "String",
+									"value": "n",
+									"chainId": "_all_"
+								}, {
+									"id": "top_mt",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "top_root_few_topic",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "tp_discussion_feed_type_android",
+									"type": "String",
+									"value": "2",
+									"chainId": "_all_"
+								}, {
+									"id": "tp_header_style",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "tp_qa_metacard",
+									"type": "String",
+									"value": "1",
+									"chainId": "_all_"
+								}, {
+									"id": "se_ad_index",
+									"type": "String",
+									"value": "10",
+									"chainId": "_all_"
+								}, {
+									"id": "top_feedre",
+									"type": "String",
+									"value": "1",
+									"chainId": "_all_"
+								}, {
+									"id": "top_feedre_cpt",
+									"type": "String",
+									"value": "101",
+									"chainId": "_all_"
+								}, {
+									"id": "top_gif",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "top_round_table",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "web_answerlist_ad",
+									"type": "String",
+									"value": "0"
+								}, {
+									"id": "top_no_weighing",
+									"type": "String",
+									"value": "1",
+									"chainId": "_all_"
+								}, {
+									"id": "top_question_ask",
+									"type": "String",
+									"value": "1",
+									"chainId": "_all_"
+								}, {
+									"id": "qa_video_answer_list",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "se_search_feed",
+									"type": "String",
+									"value": "N",
+									"chainId": "_all_"
+								}, {
+									"id": "se_zu_recommend",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "soc_brandquestion",
+									"type": "String",
+									"value": "1",
+									"chainId": "_all_"
+								}, {
+									"id": "top_billupdate1",
+									"type": "String",
+									"value": "2",
+									"chainId": "_all_"
+								}, {
+									"id": "top_cc_at",
+									"type": "String",
+									"value": "1",
+									"chainId": "_all_"
+								}, {
+									"id": "top_recall_tb_long",
+									"type": "String",
+									"value": "51",
+									"chainId": "_all_"
+								}, {
+									"id": "web_card_style",
+									"type": "String",
+									"value": "b"
+								}, {
+									"id": "web_follow_api_move",
+									"type": "String",
+									"value": "0"
+								}, {
+									"id": "zr_video_rec",
+									"type": "String",
+									"value": "zr_video_rec:base",
+									"chainId": "_all_"
+								}, {
+									"id": "top_bill",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "top_feedre_itemcf",
+									"type": "String",
+									"value": "31",
+									"chainId": "_all_"
+								}, {
+									"id": "top_quality",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "top_rerank_reformat",
+									"type": "String",
+									"value": "-1",
+									"chainId": "_all_"
+								}, {
+									"id": "se_km_ad_locate",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "se_zu_onebox",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "top_sj",
+									"type": "String",
+									"value": "2",
+									"chainId": "_all_"
+								}, {
+									"id": "tp_m_intro_re_topic",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "pin_ef",
+									"type": "String",
+									"value": "orig",
+									"chainId": "_all_"
+								}, {
+									"id": "top_root",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "top_newuser_feed",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "top_root_mg",
+									"type": "String",
+									"value": "1",
+									"chainId": "_all_"
+								}, {
+									"id": "top_thank",
+									"type": "String",
+									"value": "1",
+									"chainId": "_all_"
+								}, {
+									"id": "top_video_ab_new",
+									"type": "String",
+									"value": "-1",
+									"chainId": "_all_"
+								}, {
+									"id": "zr_boost_recall",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "qa_answerlist_ad",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "top_recall_exp_v2",
+									"type": "String",
+									"value": "1",
+									"chainId": "_all_"
+								}, {
+									"id": "top_topic_feedre",
+									"type": "String",
+									"value": "21",
+									"chainId": "_all_"
+								}, {
+									"id": "top_video_rerank",
+									"type": "String",
+									"value": "-1",
+									"chainId": "_all_"
+								}, {
+									"id": "top_video_score",
+									"type": "String",
+									"value": "1",
+									"chainId": "_all_"
+								}, {
+									"id": "se_minor_onebox",
+									"type": "String",
+									"value": "d",
+									"chainId": "_all_"
+								}, {
+									"id": "top_raf",
+									"type": "String",
+									"value": "y",
+									"chainId": "_all_"
+								}, {
+									"id": "tp_dis_version",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "gue_new_special_page",
+									"type": "String",
+									"value": "0"
+								}, {
+									"id": "se_correct_ab",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "se_mfq",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "top_hkc_test",
+									"type": "String",
+									"value": "1",
+									"chainId": "_all_"
+								}, {
+									"id": "top_new_user_rec",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "ug_follow_answerer",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "qa_web_answerlist_ad",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "top_nad",
+									"type": "String",
+									"value": "1",
+									"chainId": "_all_"
+								}, {
+									"id": "top_recall_deep_user",
+									"type": "String",
+									"value": "1",
+									"chainId": "_all_"
+								}, {
+									"id": "top_yhgc",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "tp_qa_metacard_top",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "web_stream_render",
+									"type": "String",
+									"value": "0"
+								}, {
+									"id": "qa_test",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "se_daxuechuisou",
+									"type": "String",
+									"value": "new",
+									"chainId": "_all_"
+								}, {
+									"id": "top_new_feed",
+									"type": "String",
+									"value": "1",
+									"chainId": "_all_"
+								}, {
+									"id": "top_user_gift",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "top_billvideo",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "top_universalebook",
+									"type": "String",
+									"value": "1",
+									"chainId": "_all_"
+								}, {
+									"id": "zr_art_rec",
+									"type": "String",
+									"value": "base",
+									"chainId": "_all_"
+								}, {
+									"id": "top_core_session",
+									"type": "String",
+									"value": "-1",
+									"chainId": "_all_"
+								}, {
+									"id": "top_root_ac",
+									"type": "String",
+									"value": "1",
+									"chainId": "_all_"
+								}, {
+									"id": "gw_guide",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "li_gbdt",
+									"type": "String",
+									"value": "default",
+									"chainId": "_all_"
+								}, {
+									"id": "se_ios_spb309bugfix",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "se_spb309",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "soc_bigone",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "top_30",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "tp_answer_meta_guide",
+									"type": "String",
+									"value": "1",
+									"chainId": "_all_"
+								}, {
+									"id": "web_question_invite",
+									"type": "String",
+									"value": "B"
+								}, {
+									"id": "li_album_liutongab",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "top_recall_core_interest",
+									"type": "String",
+									"value": "81",
+									"chainId": "_all_"
+								}, {
+									"id": "zr_art_rec_rank",
+									"type": "String",
+									"value": "base",
+									"chainId": "_all_"
+								}, {
+									"id": "ls_is_use_zrec",
+									"type": "String",
+									"value": "1",
+									"chainId": "_all_"
+								}, {
+									"id": "se_likebutton",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "se_wannasearch",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "top_ntr",
+									"type": "String",
+									"value": "1",
+									"chainId": "_all_"
+								}, {
+									"id": "ug_zero_follow",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "web_new_comment",
+									"type": "String",
+									"value": "1"
+								}, {
+									"id": "se_expired_ob",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "top_newfollowans",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "top_new_user_gift",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "zr_km_feed_rpm",
+									"type": "String",
+									"value": "default",
+									"chainId": "_all_"
+								}, {
+									"id": "tp_discussion_feed_card_type",
+									"type": "String",
+									"value": "2",
+									"chainId": "_all_"
+								}, {
+									"id": "se_click2",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "se_colos",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "se_config",
+									"type": "String",
+									"value": "1",
+									"chainId": "_all_"
+								}, {
+									"id": "se_time_search",
+									"type": "String",
+									"value": "origin",
+									"chainId": "_all_"
+								}, {
+									"id": "se_webtimebox",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "top_vidnocon",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "pf_creator_card",
+									"type": "String",
+									"value": "1",
+									"chainId": "_all_"
+								}, {
+									"id": "se_webrs",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "se_wiki_box",
+									"type": "String",
+									"value": "1",
+									"chainId": "_all_"
+								}, {
+									"id": "top_card",
+									"type": "String",
+									"value": "-1",
+									"chainId": "_all_"
+								}, {
+									"id": "top_wonderful",
+									"type": "String",
+									"value": "1",
+									"chainId": "_all_"
+								}, {
+									"id": "ls_topic_is_use_zrec",
+									"type": "String",
+									"value": "1",
+									"chainId": "_all_"
+								}, {
+									"id": "se_consulting_switch",
+									"type": "String",
+									"value": "off",
+									"chainId": "_all_"
+								}, {
+									"id": "soc_special",
+									"type": "String",
+									"value": "0",
+									"chainId": "_all_"
+								}, {
+									"id": "top_promo",
+									"type": "String",
+									"value": "1",
+									"chainId": "_all_"
+								}, {
+									"id": "top_recall_follow_user",
+									"type": "String",
+									"value": "91",
+									"chainId": "_all_"
+								}, {
+									"id": "tp_related_tps_movie",
+									"type": "String",
+									"value": "a",
+									"chainId": "_all_"
+								}, {
+									"id": "top_ydyq",
+									"type": "String",
+									"value": "X",
+									"chainId": "_all_"
+								}, {
+									"id": "tp_write_pin_guide",
+									"type": "String",
+									"value": "3",
+									"chainId": "_all_"
+								}, {
+									"id": "zr_infinity",
+									"type": "String",
+									"value": "zr_infinity_close",
+									"chainId": "_all_"
+								}],
+								"chains": [{
+									"chainId": "_all_"
+								}]
+							},
+							"triggers": {}
+						},
+						"userAgent": {
+							"Edge": false,
+							"Wechat": false,
+							"Weibo": false,
+							"QQ": false,
+							"Qzone": false,
+							"Mobile": false,
+							"Android": false,
+							"iOS": false,
+							"isAppleDevice": false,
+							"Zhihu": false,
+							"ZhihuHybrid": false,
+							"isBot": false,
+							"Tablet": false,
+							"UC": false,
+							"Sogou": false,
+							"Qihoo": false,
+							"Baidu": false,
+							"BaiduApp": false,
+							"Safari": false,
+							"isWebView": false,
+							"origin": "Apache-HttpClient\u002F4.5.2 (Java\u002F1.8.0_91)"
+						},
+						"trafficSource": "production",
+						"edition": {
+							"baidu": false,
+							"sogou": false,
+							"baiduBeijing": false,
+							"yidianzixun": false
+						},
+						"theme": "light",
+						"referer": "",
+						"conf": {},
+						"ipInfo": {},
+						"logged": false,
+						"tdkInfo": {}
+					},
+					"me": {
+						"accountInfoLoadStatus": {},
+						"organizationProfileStatus": {},
+						"columnContributions": []
+					},
+					"label": {},
+					"comments": {
+						"pagination": {},
+						"collapsed": {},
+						"reverse": {},
+						"reviewing": {},
+						"conversation": {},
+						"parent": {}
+					},
+					"commentsV2": {
+						"stickers": [],
+						"commentWithPicPermission": {},
+						"notificationsComments": {},
+						"pagination": {},
+						"collapsed": {},
+						"reverse": {},
+						"reviewing": {},
+						"conversation": {},
+						"conversationMore": {},
+						"parent": {}
+					},
+					"pushNotifications": {
+						"default": {
+							"isFetching": false,
+							"isDrained": false,
+							"ids": []
+						},
+						"follow": {
+							"isFetching": false,
+							"isDrained": false,
+							"ids": []
+						},
+						"vote_thank": {
+							"isFetching": false,
+							"isDrained": false,
+							"ids": []
+						},
+						"currentTab": "default",
+						"notificationsCount": {
+							"default": 0,
+							"follow": 0,
+							"vote_thank": 0
+						}
+					},
+					"messages": {
+						"data": {},
+						"currentTab": "common",
+						"messageCount": 0
+					},
+					"register": {
+						"registerValidateSucceeded": null,
+						"registerValidateErrors": {},
+						"registerConfirmError": null,
+						"sendDigitsError": null,
+						"registerConfirmSucceeded": null
+					},
+					"login": {
+						"loginUnregisteredError": false,
+						"loginBindWechatError": false,
+						"loginConfirmError": null,
+						"sendDigitsError": null,
+						"validateDigitsError": false,
+						"loginConfirmSucceeded": null,
+						"qrcodeLoginToken": "",
+						"qrcodeLoginScanStatus": 0,
+						"qrcodeLoginError": null,
+						"qrcodeLoginReturnNewToken": false
+					},
+					"active": {
+						"sendDigitsError": null,
+						"activeConfirmSucceeded": null,
+						"activeConfirmError": null
+					},
+					"switches": {
+						"vipSwitches": {
+							"mAINSWITCH": false,
+							"wIDGET": false,
+							"vIPCUSTOMERSERVICE": false,
+							"rECOMMENDBLOCKKEYWORDS": false,
+							"pROFILETOPARTICLE": false,
+							"cOMMENTSUPPORTIMAGE": false,
+							"vIPICON": false,
+							"sPEEDRENAME": false,
+							"eXCLUSIVEEXPRESSION": false
+						}
+					},
+					"captcha": {
+						"captchaNeeded": false,
+						"captchaValidated": false,
+						"captchaBase64String": null,
+						"captchaValidationMessage": null,
+						"loginCaptchaExpires": false
+					},
+					"sms": {
+						"supportedCountries": []
+					},
+					"coupon": {
+						"isRedeemingCoupon": false
+					},
+					"question": {
+						"followers": {},
+						"concernedFollowers": {},
+						"answers": {},
+						"hiddenAnswers": {},
+						"updatedAnswers": {},
+						"collapsedAnswers": {},
+						"notificationAnswers": {},
+						"invitationCandidates": {},
+						"inviters": {},
+						"invitees": {},
+						"similarQuestions": {},
+						"relatedCommodities": {},
+						"recommendReadings": {},
+						"bio": {},
+						"brand": {},
+						"permission": {},
+						"adverts": {},
+						"advancedStyle": {},
+						"commonAnswerCount": 0,
+						"hiddenAnswerCount": 0,
+						"meta": {},
+						"autoInvitation": {},
+						"simpleConcernedFollowers": {}
+					},
+					"shareTexts": {},
+					"answers": {
+						"voters": {},
+						"copyrightApplicants": {},
+						"favlists": {},
+						"newAnswer": {},
+						"concernedUpvoters": {},
+						"simpleConcernedUpvoters": {}
+					},
+					"banner": {},
+					"topic": {
+						"bios": {},
+						"hot": {},
+						"newest": {},
+						"top": {},
+						"unanswered": {},
+						"questions": {},
+						"followers": {},
+						"contributors": {},
+						"parent": {},
+						"children": {},
+						"bestAnswerers": {},
+						"wikiMeta": {},
+						"index": {},
+						"intro": {},
+						"meta": {},
+						"schema": {},
+						"creatorWall": {}
+					},
+					"explore": {
+						"recommendations": {}
+					},
+					"articles": {
+						"voters": {}
+					},
+					"favlists": {
+						"relations": {}
+					},
+					"pins": {
+						"voters": {}
+					},
+					"topstory": {
+						"topstorys": {
+							"isFetching": false,
+							"isDrained": false,
+							"afterId": 0,
+							"items": [],
+							"next": null
+						},
+						"recommend": {
+							"isFetching": false,
+							"isDrained": false,
+							"afterId": 0,
+							"items": [],
+							"next": null
+						},
+						"follow": {
+							"isFetching": false,
+							"isDrained": false,
+							"afterId": 0,
+							"items": [],
+							"next": null
+						},
+						"followWonderful": {
+							"isFetching": false,
+							"isDrained": false,
+							"afterId": 0,
+							"items": [],
+							"next": null
+						},
+						"sidebar": null,
+						"announcement": {},
+						"hotList": [],
+						"guestFeeds": {
+							"isFetching": false,
+							"isDrained": false,
+							"afterId": 0,
+							"items": [],
+							"next": null
+						},
+						"followExtra": {
+							"isNewUser": null,
+							"isFetched": false,
+							"followCount": 0,
+							"followers": []
+						}
+					},
+					"upload": {},
+					"video": {
+						"data": {},
+						"shareVideoDetail": {},
+						"last": {}
+					},
+					"guide": {
+						"guide": {
+							"isFetching": false,
+							"isShowGuide": false
+						}
+					},
+					"reward": {
+						"answer": {},
+						"article": {},
+						"question": {}
+					},
+					"search": {
+						"recommendSearch": [],
+						"topSearch": {},
+						"attachedInfo": {},
+						"nextOffset": {},
+						"topicReview": {},
+						"generalByQuery": {},
+						"generalByQueryInADay": {},
+						"generalByQueryInAWeek": {},
+						"generalByQueryInThreeMonths": {},
+						"peopleByQuery": {},
+						"topicByQuery": {},
+						"columnByQuery": {},
+						"liveByQuery": {},
+						"albumByQuery": {},
+						"eBookByQuery": {}
+					},
+					"creator": {
+						"currentCreatorUrlToken": null,
+						"tools": {
+							"question": {
+								"invitationCount": {
+									"questionFolloweeCount": 0,
+									"questionTotalCount": 0
+								},
+								"goodatTopics": []
+							},
+							"customPromotion": {
+								"itemLists": {}
+							},
+							"recommend": {
+								"recommendTimes": {}
+							}
+						},
+						"explore": {
+							"academy": {
+								"tabs": [],
+								"article": {}
+							}
+						},
+						"rights": [],
+						"rightsStatus": {},
+						"levelUpperLimit": 10,
+						"account": {
+							"growthLevel": {}
+						}
+					},
+					"publicEditPermission": {},
+					"readStatus": {}
+				},
+				"subAppName": "main"
+			}
+		</script>
+		<script src="https://static.zhihu.com/heifetz/vendor.4709996994b6c965ecab.js"></script>
+		<script src="https://static.zhihu.com/heifetz/main.app.62742ee0257f828085d7.js"></script>
+		<script src="https://static.zhihu.com/heifetz/main.people-routes.2f3e39ce75916fc5c82b.js"></script>
+	</body>
+
+</html>
